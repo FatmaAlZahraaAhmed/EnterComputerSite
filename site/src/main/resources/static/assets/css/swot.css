@@ -1,0 +1,151 @@
+body{
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	overflow:hidden;
+	margin: 0;
+  background-color: #f7f6f2;
+}
+.container{
+	display: flex;
+  justify-content: center;
+  max-height: 100vmin;
+  max-width: 100vmin;
+  margin: 0 auto;
+	height:90%;
+	width:90%;
+	border:1px solid #ccc;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	margin:0 auto;
+}
+#strengths{
+	position:absolute;
+	left:0;
+	height:50%;
+	width:50%;
+	border:1px solid #ccc;
+	background-color:#20BF55;
+}
+#weaknesses{
+	position:absolute;
+	left:0;
+	top:50%;
+	height:50%;
+	width:50%;
+	border:1px solid #ccc;
+	background-color:#FFC65F;
+}
+#opportunities{
+	position:absolute;
+	left:50%;
+	height:50%;
+	width:50%;
+	border:1px solid #ccc;
+	background-color:#0C77F8;
+}
+#threats{
+	position:absolute;
+	left:50%;
+	top:50%;
+	height:50%;
+	width:50%;
+	border:1px solid #ccc;
+	background-color:#FE8E65;
+}
+h3{
+	margin-left:10px;
+	margin-top:3px;
+	font-size:calc(2vh + 10px);
+}
+.plus{
+	position:absolute;
+	top:0;
+	background-color:rgba(0,0,0,0);
+	height:100%;
+	width:100%;
+	font-weight:bold;
+	font-size:calc(50vw - 5vh);
+	line-height:50vw;
+	cursor:pointer;
+	transition:100ms;
+	border:none;
+}
+.plus:hover{
+	opacity:0.7;
+}
+.plus i:nth-child(1){
+	position:absolute;
+	left:50%;
+	top:50%;
+	height:60%;
+	width:10%;
+	background-color:rgba(255,255,255,1);
+	transform:translate(-50%,-50%);
+}
+.plus i:nth-child(2){
+	position:absolute;
+	left:50%;
+	top:50%;
+	height:10%;
+	width:60%;
+	background-color:rgba(255,255,255,1);
+	transform:translate(-50%,-50%);
+}
+#strengthArea, #weaknessArea, #opportunityArea, #threatArea{
+	height:0%;
+	width:100%;
+	position:absolute;
+	bottom:0%;
+	background-color:rgba(0,0,0,0);
+	padding:5px;
+	overflow-y:auto;
+}
+.strong-thing, .weak-thing, .opp-thing, .threat-thing{
+	margin-left:0px;
+	margin-right:10px;
+	margin-top:2px;
+	padding:5px;
+	padding-right:30px;
+	border-radius:10px;
+	position:relative;
+}
+.weak-thing{
+	background-color:rgba(255,255,0,0.5);
+}
+.strong-thing{
+	background-color:rgba(0,255,0,0.5);
+}
+.opp-thing{
+	background-color:rgba(0,0,255,0.5);
+	color:white;
+}
+.threat-thing{
+	background-color:rgba(255,0,0,0.5);
+	color:white;
+}
+
+@media only screen and (max-width: 500px) {
+	h3{
+		font-size:12px;
+	}
+}
+.remove{
+	position:absolute;
+	height:100%;
+	transform:translate(-50%,0%);
+	background-color:rgba(0,0,0,0.3);
+	top:0%;
+	right:calc(0% - 10px);
+	border:0;
+	border-radius:0 10px 10px 0;
+	font-weight:bold;
+	cursor:pointer;
+	user-select: none;
+	color:white;
+	padding:10px;
+	margin-right:-5px;
+}
+.remove:hover{
+	background-color:rgba(0,0,0,0.1);
+}
