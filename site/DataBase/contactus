@@ -1,0 +1,7 @@
+CREATE TABLE `contactus` (
+  `USER_NAME` varchar(30) NOT NULL,
+  `USER_EMAIL` varchar(30) NOT NULL,
+  `SUBJECT` varchar(30) NOT NULL,
+  `MESSAGE` varchar(300) DEFAULT NULL,
+  PRIMARY KEY (`USER_NAME`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
