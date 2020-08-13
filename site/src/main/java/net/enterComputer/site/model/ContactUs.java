@@ -19,6 +19,9 @@ public class ContactUs implements Serializable {
 
     @Id
     @NotNull
+    private Long userId;
+
+    @NotNull
     @Size(min = 1, max = 30)
     private String userName;
 
@@ -34,6 +37,14 @@ public class ContactUs implements Serializable {
     private String message;
 
     public ContactUs() {
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 
     public ContactUs(String userName) {
