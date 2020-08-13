@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class ContactFormController {
 
-//    @GetMapping("/contactForm")
-//    public String show(Model model){
-//        model.addAttribute("ContactUs",new ContactUs());
-//        return "index";
-//    }
+    @GetMapping("/")
+    public String show(Model model){
+        model.addAttribute("ContactUs",new ContactUs());
+        return "index";
+    }
 
     @PostMapping("/contactForm")
     public String submitConForm(@ModelAttribute ContactUs contactUs ,
