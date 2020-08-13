@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 
 <head>
-  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>EnterComputer</title>
@@ -16,15 +16,15 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="../static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="../static/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="../static/assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="../static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link th:href="@{/assets/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+  <link th:href="@{/assets/vendor/icofont/icofont.min.css}" rel="stylesheet">
+  <link th:href="@{/assets/vendor/boxicons/css/boxicons.min.css}" rel="stylesheet">
+  <link th:href="@{/assets/vendor/owl.carousel/assets/owl.carousel.min.css}" rel="stylesheet">
+  <link th:href="@{/assets/vendor/venobox/venobox.css}" rel="stylesheet">
+  <link th:href="@{/assets/vendor/aos/aos.css}" rel="stylesheet">
 
   <!--  CSS File -->
-  <link href="../static/assets/css/style.css" rel="stylesheet">
+  <link th:href="@{/assets/css/style.css}" rel="stylesheet">
 
   <!-- =======================================================
   * Project Name:
@@ -83,7 +83,7 @@
         </div>
 
         <div class="col-md-6 intro-img order-md-last order-first" data-aos="zoom-out" data-aos-delay="200">
-          <img src="../static/assets/img/banner.jpg" alt="" class="img-fluid">
+          <img th:src="@{/assets/img/banner.jpg}" alt="" class="img-fluid" src="">
         </div>
       </div>
 
@@ -192,7 +192,7 @@
                 </a>
               </li>
               <li>
-                <form action="" method="" class="form_Q">
+                <form action="" method="post" class="form_Q">
                     <input type="text" name="name" placeholder="Name"/>
                     <input type="email" name="email" placeholder="Email"/>
                     <textarea type="text" name="message" placeholder="Message">
@@ -207,22 +207,26 @@
             <div class="tab-content">
               <div class="tab-pane active show" id="tab-1">
                 <figure>
-                  <img src="../static/assets/img/features-1.png" alt="" class="img-fluid">
+                  <img th:src="@{/assets/img/features-1.png}" alt="" class="img-fluid"
+                       src="../static/assets/img/features-1.png"/>
                 </figure>
               </div>
               <div class="tab-pane" id="tab-2">
                 <figure>
-                  <img src="../static/assets/img/features-2.png" alt="" class="img-fluid">
+                  <img th:src="@{/assets/img/features-2.png}" alt="" class="img-fluid"
+                  src="../static/assets/img/features-2.png">
                 </figure>
               </div>
               <div class="tab-pane" id="tab-3">
                 <figure>
-                  <img src="../static/assets/img/features-3.png" alt="" class="img-fluid">
+                  <img th:src="@{/assets/img/features-3.png}" alt="" class="img-fluid"
+                  src="../static/assets/img/features-3.png">
                 </figure>
               </div>
               <div class="tab-pane" id="tab-4">
                 <figure>
-                  <img src="../static/assets/img/features-4.png" alt="" class="img-fluid">
+                  <img th:src="@{/assets/img/features-4.png}" alt="" class="img-fluid"
+                  src="../static/assets/img/features-4.png">
                 </figure>
               </div>
             </div>
@@ -353,7 +357,8 @@
               Desc.
               <i class="bx bxs-quote-alt-right quote-icon-right"></i>
             </p>
-            <img src="../static/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+            <img th:src="@{/assets/img/testimonials/testimonials-1.jpg}"
+                 src="../static/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
             <h3>Client#1</h3>
             <h4>Ceo &amp; Founder</h4>
           </div>
@@ -365,7 +370,8 @@
               Desc#3.
               <i class="bx bxs-quote-alt-right quote-icon-right"></i>
             </p>
-            <img src="../static/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+            <img th:src="@{/assets/img/testimonials/testimonials-3.jpg}"
+                 src="../static/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
             <h3>Client#3</h3>
             <h4>Store Owner</h4>
           </div>
@@ -376,7 +382,8 @@
               Desc.
               <i class="bx bxs-quote-alt-right quote-icon-right"></i>
             </p>
-            <img src="../static/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+            <img th:src="@{/assets/img/testimonials/testimonials-4.jpg}"
+                 src="../static/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
             <h3>Client#4</h3>
             <h4>Freelancer</h4>
           </div>
@@ -387,7 +394,8 @@
               Desc.
               <i class="bx bxs-quote-alt-right quote-icon-right"></i>
             </p>
-            <img src="../static/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+            <img th:src="@{/assets/img/testimonials/testimonials-5.jpg}"
+                 src="../static/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
             <h3>Client#5</h3>
             <h4>Entrepreneur</h4>
           </div>
@@ -428,7 +436,8 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
-              <img src="../static/assets/img/team/team-2.jpg" class="img-fluid" alt="">
+              <img th:src="@{/assets/img/team/team-2.jpg}"
+                   src="../static/assets/img/team/team-2.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Sarah Jhonson</h4>
@@ -446,7 +455,8 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="member">
-              <img src="../static/assets/img/team/team-3.jpg" class="img-fluid" alt="">
+              <img th:src="@{/assets/img/team/team-3.jpg}"
+                   src="../static/assets/img/team/team-3.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>William Anderson</h4>
@@ -464,7 +474,8 @@
 
           <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="member">
-              <img src="../static/assets/img/team/team-4.jpg" class="img-fluid" alt="">
+              <img th:src="@{/assets/img/team/team-4.jpg}"
+                   src="../static/assets/img/team/team-4.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Amanda Jepson</h4>
@@ -646,17 +657,17 @@
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->
-  <script src="../static/assets/vendor/jquery/jquery.min.js"></script>
-  <script src="../static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="../static/assets/vendor/php-email-form/validate.js"></script>
-  <script src="../static/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="../static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="../static/assets/vendor/venobox/venobox.min.js"></script>
-  <script src="../static/assets/vendor/aos/aos.js"></script>
+  <script th:src="@{/assets/vendor/jquery/jquery.min.js}"></script>
+  <script th:src="@{/assets/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+  <script th:src="@{/assets/vendor/jquery.easing/jquery.easing.min.js}"></script>
+  <script th:src="@{/assets/vendor/php-email-form/validate.js}"></script>
+  <script th:src="@{/assets/vendor/owl.carousel/owl.carousel.min.js}"></script>
+  <script th:src="@{/assets/vendor/isotope-layout/isotope.pkgd.min.js}"></script>
+  <script th:src="@{/assets/vendor/venobox/venobox.min.js}"></script>
+  <script th:src="@{/assets/vendor/aos/aos.js}"></script>
 
   <!-- Template Main JS File -->
-  <script src="../static/assets/js/main.js"></script>
+  <script th:src="@{/assets/js/main.js}"></script>
 
 </body>
 
