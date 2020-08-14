@@ -23,17 +23,21 @@ public class ContactUs implements Serializable {
 
     @NotNull
     @Size(min = 1, max = 30)
+    @Column(name = "USER_NAME")
     private String userName;
 
     @Email
     @Size(max = 30)
+    @Column(name = "USER_EMAIL")
     private String userEmail;
 
     @NotNull
     @Size(min = 1, max = 30)
+    @Column(name = "SUBJECT")
     private String subject;
 
     @Size(max = 300)
+    @Column(name = "MESSAGE")
     private String message;
 
     public ContactUs() {
