@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jca.cci.RecordTypeNotSupportedException;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -13,6 +15,8 @@ public class ContactUsService {
 
     @Autowired
     ContactUsRepository repository;
+
+
 
     public ContactUs createNewMessage(ContactUs newMessage) throws
             RecordTypeNotSupportedException {
@@ -24,18 +28,26 @@ public class ContactUsService {
          */
         Optional<ContactUs> messages = repository.findById(newMessage.getUserId());
         if (messages.isPresent()) {
+
             ContactUs newOne = messages.get();
             newOne.setUserName(newMessage.getUserName());
             newOne.setUserEmail(newMessage.getUserEmail());
             newOne.setSubject(newMessage.getSubject());
             newOne.setMessage(newMessage.getMessage());
+
             newOne = repository.saveAndFlush(newOne);
 
             return newOne;
 
         } else {
             newMessage = repository.saveAndFlush(newMessage);
+
             return newMessage;
         }
     }
+
+    public ContactUs saveMessage(ContactUs contactUs) {
+        return repository.save(contactUs);
+    }
+
 }

@@ -19,6 +19,7 @@ public class ContactUs implements Serializable {
 
     @Id
     @NotNull
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long userId;
 
     @NotNull
@@ -51,9 +52,6 @@ public class ContactUs implements Serializable {
         this.userId = userId;
     }
 
-    public ContactUs(String userName) {
-        this.userName = userName;
-    }
 
     public ContactUs(String userName, String subject) {
         this.userName = userName;
