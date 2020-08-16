@@ -9,36 +9,30 @@ import javax.validation.constraints.Size;
 
 
 @Entity(name = "contactus")
-@NamedQueries({
-        @NamedQuery(name = "Contactus.findAll", query = "SELECT c FROM contactus c"),
-        @NamedQuery(name = "Contactus.findByUserName", query = "SELECT c FROM contactus c WHERE c.userName = :userName"),
-        @NamedQuery(name = "Contactus.findByUserEmail", query = "SELECT c FROM contactus c WHERE c.userEmail = :userEmail"),
-        @NamedQuery(name = "Contactus.findBySubject", query = "SELECT c FROM contactus c WHERE c.subject = :subject"),
-        @NamedQuery(name = "Contactus.findByMessage", query = "SELECT c FROM contactus c WHERE c.message = :message")})
 public class ContactUs implements Serializable {
 
     @Id
     @NotNull
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long userId;
 
     @NotNull
     @Size(min = 1, max = 30)
-    @Column(name = "USER_NAME")
+    @Column(name = "userName")
     private String userName;
 
     @Email
     @Size(max = 30)
-    @Column(name = "USER_EMAIL")
+    @Column(name = "userEmail")
     private String userEmail;
 
     @NotNull
     @Size(min = 1, max = 30)
-    @Column(name = "SUBJECT")
+    @Column(name = "subject")
     private String subject;
 
     @Size(max = 300)
-    @Column(name = "MESSAGE")
+    @Column(name = "message")
     private String message;
 
     public ContactUs() {
@@ -90,26 +84,6 @@ public class ContactUs implements Serializable {
         this.message = message;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (userName != null ? userName.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof ContactUs)) {
-            return false;
-        }
-        ContactUs other = (ContactUs) object;
-        if ((this.userName == null && other.userName != null)
-                || (this.userName != null && !this.userName.equals(other.userName))) {
-            return false;
-        }
-        return true;
-    }
 
     @Override
     public String toString() {
