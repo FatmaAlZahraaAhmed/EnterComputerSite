@@ -73,20 +73,20 @@ public class MainController {
         return "redirect:/tdl.html";
     }
 
-    @GetMapping("/showFormForUptade/{id}")
+    @GetMapping("/showFormForUpdate/{id}")
     //when update btn is hit
-    public String showFormForUptade(@PathVariable(value = "id") long id, Model model) {
-        // get the todo from service
+    public String showFormForUpdate(@PathVariable(value = "id") long id, Model model) {
+        // get the to-do from service
         ToDo todo = toDoService.getToDoById(id);
-        // set todo as a model attribute to add to form
+        // set to-do as a model attribute to add to form
         model.addAttribute("ToDo", todo);
         return "update-todo";//return form update the info
     }
 
-    @GetMapping("/deletToDo/{id}")
+    @GetMapping("/deleteToDo/{id}")
     //delete btn is hit
     //get the one byId
-    public String deletToDo(@PathVariable(value = "id") long id, Model model) {
+    public String deleteToDo(@PathVariable(value = "id") long id, Model model) {
         this.toDoService.deleteToDoById(id);
         return "redirect:/tdl.html";//return to TDL page
     }
