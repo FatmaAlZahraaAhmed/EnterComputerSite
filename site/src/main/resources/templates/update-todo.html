@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>ToDo Management System</title>
+    <title>Update ToDo</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -69,32 +69,25 @@
     </div>
 </header><!-- End Header -->
 
-<div class="container my-2">
-    <h1>ToDo List</h1>
+<div class="container">
+    <h1>ToDo Management System</h1>
+    <hr>
+    <h2>Update ToDo</h2>
 
-    <a th:href="@{/showNewTodoForm}" class="btn btn-primary btn-sm mb-3">
-        Add ToDo </a>
+    <form action="#" th:action="@{/saveToDo}" th:object="${ToDo}"
+          method="POST">
+        <input type="text" th:field="*{subject}" class="form-control mb-4 col-4">
 
-    <table border="1" class="table table-striped table-responsive-md">
-        <thead>
-        <tr>
-            <th>ToDo Subject</th>
-            <th>ToDo Body</th>
-            <th>To Whom</th>
-            <th>Actions</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="ToDo: ${ListOfToDos}">
-            <td th:text="${ToDo.subject}"></td>
-            <td th:text="${ToDo.body}"></td>
-            <td th:text="${ToDo.to_whome}"></td>
-            <td><a th:href="@{/showFormForUptade/{id}(id=${ToDo.id})}"
-                   class="btn btn-primary">Update</a>
-                <a th:href="@{/deletToDo/{id}(id=${ToDo.id})}" class="btn btn-danger">Delete</a></td>
-        </tr>
-        </tbody>
-    </table>
+        <input type="text" th:field="*{body}" class="form-control mb-4 col-4">
+
+        <input type="text" th:field="*{to_whome}" class="form-control mb-4 col-4">
+
+        <button type="submit" class="btn btn-info col-2"> Save ToDo</button>
+    </form>
+
+    <hr>
+
+    <a th:href="@{/tdl.html}"> Back to ToDos List</a>
 </div>
 <!-- Vendor JS Files -->
 <script th:src="@{assets/vendor/jquery/jquery.min.js}"></script>
