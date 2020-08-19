@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<body>
+<div th:fragment="theheader">
+<!--    use this -->
+<!--    <div th:replace="common.html :: theheader"></div> -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>EnterComputer</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="" rel="icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link th:href="@{/assets/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/assets/vendor/icofont/icofont.min.css}" rel="stylesheet">
+    <link th:href="@{/assets/vendor/boxicons/css/boxicons.min.css}" rel="stylesheet">
+    <link th:href="@{/assets/vendor/owl.carousel/assets/owl.carousel.min.css}" rel="stylesheet">
+    <link th:href="@{/assets/vendor/venobox/venobox.css}" rel="stylesheet">
+    <link th:href="@{/assets/vendor/aos/aos.css}" rel="stylesheet">
+
+    <!--  CSS File -->
+    <link th:href="@{/assets/css/style.css}" rel="stylesheet">
+
+    <!-- =======================================================
+    * Project Name:
+    * Project URL:
+    * Author:
+    ======================================================== -->
+</div>
+<div th:fragment="foot">
+<!--    use this -->
+<!--    <div th:replace="common.html :: foot"></div>  -->
+    <!-- Vendor JS Files -->
+    <script th:src="@{/assets/vendor/jquery/jquery.min.js}"></script>
+    <script th:src="@{/assets/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+    <script th:src="@{/assets/vendor/jquery.easing/jquery.easing.min.js}"></script>
+    <script th:src="@{/assets/vendor/owl.carousel/owl.carousel.min.js}"></script>
+    <script th:src="@{/assets/vendor/isotope-layout/isotope.pkgd.min.js}"></script>
+    <script th:src="@{/assets/vendor/venobox/venobox.min.js}"></script>
+    <script th:src="@{/assets/vendor/aos/aos.js}"></script>
+
+    <!-- Template Main JS File -->
+    <script th:src="@{/assets/js/main.js}"></script>
+</div>
+</body>
+</html>

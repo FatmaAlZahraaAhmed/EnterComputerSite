@@ -1,675 +1,611 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
-
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>EnterComputer</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="" rel="icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link th:href="@{/assets/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
-  <link th:href="@{/assets/vendor/icofont/icofont.min.css}" rel="stylesheet">
-  <link th:href="@{/assets/vendor/boxicons/css/boxicons.min.css}" rel="stylesheet">
-  <link th:href="@{/assets/vendor/owl.carousel/assets/owl.carousel.min.css}" rel="stylesheet">
-  <link th:href="@{/assets/vendor/venobox/venobox.css}" rel="stylesheet">
-  <link th:href="@{/assets/vendor/aos/aos.css}" rel="stylesheet">
-
-  <!--  CSS File -->
-  <link th:href="@{/assets/css/style.css}" rel="stylesheet">
-
-  <!-- =======================================================
-  * Project Name:
-  * Project URL: 
-  * Author: 
-  ======================================================== -->
+    <div th:replace="common.html :: theheader"></div>
 </head>
-
 <body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
     <div class="container d-flex">
-      <div class="logo mr-auto">
-        <h1 class="text-light"><a href="index.html">Enter Computer</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html"><img src="" alt="Logo" class="img-fluid"></a>-->
-      </div>
-
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li class="drop-down"><a href="#services">Solutions</a>
+        <div class="logo mr-auto">
+            <h1 class="text-light">
+                <a href="index.html">EnterComputer</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html"><img src="" alt="Logo" class="img-fluid"></a>-->
+        </div>
+        <nav class="nav-menu d-none d-lg-block">
             <ul>
-              <li><a href="#">ToDoList</a></li>
-
-              <li class="drop-down"><a href="#">Services</a>
-                <ul>
-                  <li><a href="#">Markting</a></li>
-                  <li><a href="#">Markting</a></li>
-                  <li><a href="#"></a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li class="drop-down"><a href="#services">Solutions</a>
+                    <ul>
+                        <li><a href="">ToDoList</a></li>
+                        <li><a href="swot.html">Swot Analysis</a></li>
+                        <li><a href="#">TrackingEmployee</a></li>
+                        <li class="drop-down"><a href="#">Services</a>
+                            <ul>
+                                <li><a href="#">Web&Mobile Application</a></li>
+                                <li><a href="#">Marketing</a></li>
+                                <li><a href="#">Bussniess Model</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
-          </li>
-          <li><a href="#team">Team</a></li>
-          
-          <li><a href="#contact">Contact Us</a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
+        </nav><!-- .nav-menu -->
     </div>
-  </header><!-- End Header -->
+</header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="clearfix">
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="clearfix">
     <div class="container d-flex h-100">
-      <div class="row justify-content-center align-self-center" data-aos="fade-up">
-        <div class="col-md-6 intro-info order-md-first order-last" data-aos="zoom-in" data-aos-delay="100">
-          <h2>EnterComputer Solutions<br>for Your <span>Business!</span></h2>
-          <div>
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
-          </div>
-        </div>
+        <div class="row justify-content-center align-self-center" data-aos="fade-up">
+            <div class="col-md-6 intro-info order-md-first order-last" data-aos="zoom-in" data-aos-delay="100">
+                <h2>EnterComputer Solutions<br>for Your <span>Business!</span></h2>
+                <a href="login.html" class="loin-btn">Get Started</a>
+            </div>
 
-        <div class="col-md-6 intro-img order-md-last order-first" data-aos="zoom-out" data-aos-delay="200">
-          <img th:src="@{/assets/img/banner.jpg}" alt="" class="img-fluid" src="">
-        </div>
-      </div>
 
+            <div class="col-md-6 intro-img order-md-last order-first" data-aos="zoom-out" data-aos-delay="200">
+                <img src="assets/img/intro-img.svg"
+                     th:src="@{/assets/img/intro-img.svg}" alt="" class="img-fluid">
+            </div>
+        </div>
     </div>
-  </section><!-- End Hero -->
-
-  <main id="main">
-
+</section><!-- End Hero -->
+<main id="main">
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-xl-6 col-lg-7" data-aos="fade-right">
-            <img src="../static/assets/img/about.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-xl-6 col-lg-5 pt-5 pt-lg-0 content-serv">
-            <h3 data-aos="fade-up">WHO WE SERVE</h3>
-            <p data-aos="fade-up">Browse the markets we serve.</p>
-            <div class="icon-box" data-aos="fade-up">
-              <i class="bx bx-receipt"></i>
-              <h4>Companies</h4>
-              <p>High-impact companies around the world choose technology solutions for employee engagement to succeed.</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-7" data-aos="fade-right">
+                    <img src="assets/img/about.jpg"
+                         th:src="@{/assets/img/about.jpg}" class="img-fluid" alt="">
+                </div>
+                <div class="col-xl-6 col-lg-5 pt-5 pt-lg-0 content-serv">
+                    <h3 data-aos="fade-up">
+                        <strong>EnterComputer - Caring for your business</strong>
+                    </h3>
+                    <p>
+                        <font color="black" size="4">From smart customization of the pre-developed platforms to
+                            full-cycle custom software development along with the client's vision, weServe is an
+                            experienced development partner that delivers cost-effective and reliable custom software
+                            solutions that match your unique requirements.
+                        </font></p>
+                </div>
             </div>
-
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-              <i class='bx bxs-graduation'></i>
-              <h4>Higher Education Institutions</h4>
-              <p>Ensure a thriving institution today and in the future.</p>
-            </div>
-
-            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
-              <i class="bx bx-cube-alt"></i>
-              <h4>###</h4>
-              <p>Description </p>
-            </div>
-
-          </div>
         </div>
-
-      </div>
     </section><!-- End About Section -->
 
-    <!-- ======= Steps Section ======= -->
-    <section id="steps" class="steps section-bg">
-      <div class="container">
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+        <div class="container-fluid" data-aos="fade-up">
+            <header class="section-header">
+                <h3 class="title">Why choose us?</h3>
+                <p class="description">Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo
+                    abhorreant vituperatoribus.</p>
+            </header>
 
-        <div class="row no-gutters">
+            <div class="row">
+                <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="why-us-img">
+                        <img src="assets/img/why-us.jpg" th:src="@{/assets/img/why-us.jpg}" alt="" class="img-fluid">
+                    </div>
+                </div>
 
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in">
-            <span>01</span>
-            <h4>Lorem Ipsum</h4>
-            <p>desc</p>
-          </div>
+                <div class="col-lg-6">
+                    <div class="why-us-content">
+                        <p>Molestiae omnis numquam corrupti omnis itaque. Voluptatum quidem impedit. Odio dolorum
+                            exercitationem est error omnis repudiandae ad dolorum sit.</p>
+                        <p>
+                            Explicabo repellendus quia labore. Non optio quo ea ut ratione et quaerat. Porro facilis
+                            deleniti porro consequatur
+                            et temporibus. Labore est odio.
 
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in" data-aos-delay="100">
-            <span>02</span>
-            <h4>Lorem Ipsum</h4>
-            <p>desc</p>
+                            Odio omnis saepe qui. Veniam eaque ipsum. Ea quia voluptatum quis explicabo sed nihil
+                            repellat..
+                        </p>
 
-          </div>
+                        <div class="features clearfix " data-aos="fade-up" data-aos-delay="100"
+                             style="margin-top: 48px;">
+                            <i class='bx bxs-diamond'></i>
+                            <h4>Provided Clean Starting</h4>
+                            <p>Commodi quia voluptatum. Est cupiditate voluptas quaerat officiis ex alias dignissimos et
+                                ipsum. Soluta at enim modi ut incidunt dolor et.</p>
+                        </div>
 
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in" data-aos-delay="200">
-            <span>03</span>
-           <h4>Lorem Ipsum</h4>
-            <p>desc</p>
+                        <div class="features clearfix" data-aos="fade-up" data-aos-delay="200">
+                            <i class='bx bxs-help-circle'></i>
+                            <h4>Helping You OverCome Market Diffcult</h4>
+                            <p>Molestias eius rerum iusto voluptas et ab cupiditate aut enim. Assumenda animi occaecati.
+                                Quo dolore fuga quasi autem aliquid ipsum odit. Perferendis doloremque iure nulla
+                                aut.</p>
+                        </div>
 
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in" data-aos-delay="300">
-            <span>04</span>
-            <h4>Lorem Ipsum</h4>
-            <p>desc</p>
-
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in" data-aos-delay="400">
-            <span>05</span>
-            <h4>Lorem Ipsum</h4>
-            <p>desc</p>
-
-          </div>
-
-          <div class="col-lg-4 col-md-6 content-item" data-aos="fade-in" data-aos-delay="500">
-            <span>06</span>
-            <h4>Lorem Ipsum</h4>
-            <p>desc</p>
-
-          </div>
-
+                        <div class="features clearfix" data-aos="fade-up" data-aos-delay="300">
+                            <i class='bx bxs-planet'></i>
+                            <h4>Go On With Markt Plans</h4>
+                            <p>Voluptates nihil et quis omnis et eaque omnis sint aut. Ducimus dolorum aspernatur. Totam
+                                dolores ut enim ullam voluptas distinctio aut.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-      </div>
-    </section><!-- End Steps Section -->
+    </section><!-- End Why Us Section-->
 
     <!-- ======= Features Section ======= -->
     <section id="features" class="features">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-right">
-            <ul class="nav nav-tabs flex-column">
-              <li class="nav-item">
-                <a class="nav-link active show" data-toggle="tab" href="#tab-1">
-                  <h2>How B2B can help you</h2>
-                </a>
-              </li>
-              <li>
-                <form action="" method="post" class="form_Q">
-                    <input type="text" name="name" placeholder="Name"/>
-                    <input type="email" name="email" placeholder="Email"/>
-                    <textarea type="text" name="message" placeholder="Message">
-
-                    </textarea>
-                    <input type="submit" value="Send">
-              </form>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-7 ml-auto" data-aos="fade-left">
-            <div class="tab-content">
-              <div class="tab-pane active show" id="tab-1">
-                <figure>
-                  <img th:src="@{/assets/img/features-1.png}" alt="" class="img-fluid"
-                       src="../static/assets/img/features-1.png"/>
-                </figure>
-              </div>
-              <div class="tab-pane" id="tab-2">
-                <figure>
-                  <img th:src="@{/assets/img/features-2.png}" alt="" class="img-fluid"
-                  src="../static/assets/img/features-2.png">
-                </figure>
-              </div>
-              <div class="tab-pane" id="tab-3">
-                <figure>
-                  <img th:src="@{/assets/img/features-3.png}" alt="" class="img-fluid"
-                  src="../static/assets/img/features-3.png">
-                </figure>
-              </div>
-              <div class="tab-pane" id="tab-4">
-                <figure>
-                  <img th:src="@{/assets/img/features-4.png}" alt="" class="img-fluid"
-                  src="../static/assets/img/features-4.png">
-                </figure>
-              </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-right">
+                    <ul class="nav nav-tabs flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active show" data-toggle="tab" href="#tab-1">
+                                <h2>How Can We Help You</h2>
+                            </a>
+                        </li>
+                        <li><i class=""></i>
+                            Transparent Consultation
+                        </li>
+                        <li><i></i>
+                            Effective PartnerShips
+                        </li>
+                        <li><i></i>
+                            ResultOrientedSolution
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-7 ml-auto" data-aos="fade-left">
+                    <div class="tab-content">
+                        <div class="tab-pane active show" id="tab-1">
+                            <figure>
+                                <img src="assets/img/features-1.png" th:src="@{/assets/img/features-1.png}" alt=""
+                                     class="img-fluid">
+                            </figure>
+                        </div>
+                        <div class="tab-pane" id="tab-2">
+                            <figure>
+                                <img src="assets/img/features-2.png"
+                                     th:src="@{assets/img/features-2.png}" alt="" class="img-fluid">
+                            </figure>
+                        </div>
+                        <div class="tab-pane" id="tab-3">
+                            <figure>
+                                <img src="assets/img/features-3.png" th:src="@{/assets/img/features-3.png}" alt=""
+                                     class="img-fluid">
+                            </figure>
+                        </div>
+                        <div class="tab-pane" id="tab-4">
+                            <figure>
+                                <img src="assets/img/features-4.png" th:src="@{/assets/img/features-3.png}" alt=""
+                                     class="img-fluid">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
 
-      </div>
+        </div>
     </section><!-- End Features Section -->
 
-   <!-- ======= Services Section ======= -->
-    <section class="section-services">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-md-10 col-lg-8">
-          <div class="header-section">
-            <h2 class="title">Exclusive <span>Services</span></h2>
-            <p class="description">There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some injected humour</p>
-          </div>
+    <!-- ======= Services Section ======= -->
+    <section class="section-services" id="services">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-md-10 col-lg-8">
+                    <div class="header-section">
+                        <h2 class="title">Exclusive <span>Services</span></h2>
+                        <p class="description">There are many variations of passages of Lorem Ipsum available but the
+                            majority have suffered alteration in some injected humour</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Start Single Service -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="single-service active">
+                        <div class="part-1">
+                            <i class="fab fa-angellist"></i>
+                            <h3 class="title">Swot Analysis</h3>
+                        </div>
+                        <div class="part-2">
+                            <p class="description">Express delivery inno service effective logistics solution for
+                                delivery of small cargo delivery service.</p>
+                            <a target="_self" href="swot.html"><i class="fas fa-arrow-circle-right"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- / End Single Service -->
+                <!-- Start Single Service -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="single-service">
+                        <div class="part-1">
+                            <i class="fas fa-broadcast-tower"></i>
+                            <h3 class="title">To-Do-List</h3>>
+                        </div>
+                        <div class="part-2">
+                            <p class="description">Express delivery inno service effective logistics solution for
+                                delivery of small cargo delivery service.</p>
+                            <a href="tdl.html" target="_self"><i class="fas fa-arrow-circle-right"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- / End Single Service -->
+                <!-- Start Single Service -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="single-service">
+                        <div class="part-1">
+                            <i class="fab fa-500px"></i>
+                            <h3 class="title">TrackingEmployee</h3>
+                        </div>
+                        <div class="part-2">
+                            <p class="description">Express delivery inno service effective logistics solution for
+                                delivery of small cargo delivery service.</p>
+                            <a href="#"><i class="fas fa-arrow-circle-right"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- / End Single Service -->
+
+                <!-- Start Single Service -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="single-service">
+                        <div class="part-1">
+                            <i class="fas fa-award"></i>
+                            <h3 class="title">Web & Mobile Application</h3>
+                        </div>
+                        <div class="part-2">
+                            <p class="description">Express delivery inno service effective logistics solution for
+                                delivery of small cargo delivery service.</p>
+                            <a href="#"><i class="fas fa-arrow-circle-right"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- / End Single Service -->
+
+                <!-- Start Single Service -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="single-service">
+                        <div class="part-1">
+                            <i class="fab fa-asymmetrik"></i>
+                            <h3 class="title">Marketing</h3>
+                            <h3></h3>
+                        </div>
+                        <div class="part-2">
+                            <p class="description">Express delivery inno service effective logistics solution for
+                                delivery of small cargo delivery service.</p>
+                            <a href="#"><i class="fas fa-arrow-circle-right"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- / End Single Service -->
+                <!-- Start Single Service -->
+                <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="single-service">
+                        <div class="part-1">
+                            <i class="fab fa-canadian-maple-leaf"></i>
+                            <h3 class="title">Bussiness Model</h3>
+                        </div>
+                        <div class="part-2">
+                            <p class="description">Express delivery inno service effective logistics solution for
+                                delivery of small cargo delivery service.</p>
+                            <a href="#"><i class="fas fa-arrow-circle-right"></i>Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- / End Single Service -->
+            </div>
         </div>
-      </div>
-      <div class="row">
-        <!-- Start Single Service -->
-        <div class="col-md-6 col-lg-4">
-          <div class="single-service">
-            <div class="part-1">
-              <i class="fab fa-500px"></i>
-              <h3 class="title">Express delivery innovative Design service</h3>
-            </div>
-            <div class="part-2">
-              <p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
-              <a href="#"><i class="fas fa-arrow-circle-right"></i>Read More</a>
-            </div>
-          </div>
-        </div>
-        <!-- / End Single Service -->
-        <!-- Start Single Service -->
-        <div class="col-md-6 col-lg-4">
-          <div class="single-service">
-            <div class="part-1">
-              <i class="fab fa-angellist"></i>
-              <h3 class="title">Swot Analysis</h3>
-            </div>
-            <div class="part-2">
-              <p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
-              <a href="#"><i class="fas fa-arrow-circle-right"></i>Read More</a>
-            </div>
-          </div>
-        </div>
-        <!-- / End Single Service -->
-        <!-- Start Single Service -->
-        <div class="col-md-6 col-lg-4">
-          <div class="single-service">
-            <div class="part-1">
-              <i class="fas fa-award"></i>
-              <h3 class="title">Service provider provide organizations consulting</h3>
-            </div>
-            <div class="part-2">
-              <p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
-              <a href="#"><i class="fas fa-arrow-circle-right"></i>Read More</a>
-            </div>
-          </div>
-        </div>
-        <!-- / End Single Service -->
-        <!-- Start Single Service -->
-        <div class="col-md-6 col-lg-4">
-          <div class="single-service">
-            <div class="part-1">
-              <i class="fab fa-asymmetrik"></i>
-              <h3 class="title">Marketing</h3>
-            </div>
-            <div class="part-2">
-              <p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
-              <a href="#"><i class="fas fa-arrow-circle-right"></i>Read More</a>
-            </div>
-          </div>
-        </div>
-        <!-- / End Single Service -->
-        <!-- Start Single Service -->
-        <div class="col-md-6 col-lg-4">
-          <div class="single-service">
-            <div class="part-1">
-              <i class="fas fa-broadcast-tower"></i>
-              <h3 class="title">To-Do-List</h3>
-            </div>
-            <div class="part-2">
-              <p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
-              <a href="tdl.html" target="_self"><i class="fas fa-arrow-circle-right"></i>Read More</a>
-            </div>
-          </div>
-        </div>
-        <!-- / End Single Service -->
-        <!-- Start Single Service -->
-        <div class="col-md-6 col-lg-4">
-          <div class="single-service">
-            <div class="part-1">
-              <i class="fab fa-canadian-maple-leaf"></i>
-              <h3 class="title">This broad term incorporates all IT businesses</h3>
-            </div>
-            <div class="part-2">
-              <p class="description">Express delivery inno service effective logistics solution for delivery of small cargo delivery service.</p>
-              <a href="#"><i class="fas fa-arrow-circle-right"></i>Read More</a>
-            </div>
-          </div>
-        </div>
-        <!-- / End Single Service -->
-      </div>
-    </div>
-  </section>
+    </section>
     <!-- End Services Section -->
 
 
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
-      <div class="container">
+    <!-- ======= Clients Section ======= -->
 
-        <div class="section-title" data-aos="fade-up">
-          <div class="header-section" data-aos="fade-up">
-            <h2 class="title">Exclusive <span>Clients</span></h2>
-            <p class="description">There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some injected humour</p>
-          </div>
-        </div>
+    <section id="clients" class="clients">
+        <div class="container" data-aos="fade-top">
 
-        <div class="owl-carousel testimonials-carousel" data-aos="fade-up">
+            <div class="col-md-10 col-lg-8 center text-center">
+                <div class="header-section">
+                    <h2 class="title">Our<span>Clients</span></h2>
+                    <p class="description">There are many variations of passages of Lorem Ipsum available but the
+                        majority have suffered alteration in some injected humour</p>
+                </div>
+            </div>
 
-          <div class="testimonial-item">
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Desc.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-            <img th:src="@{/assets/img/testimonials/testimonials-1.jpg}"
-                 src="../static/assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-            <h3>Client#1</h3>
-            <h4>Ceo &amp; Founder</h4>
-          </div>
-
-          
-          <div class="testimonial-item">
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Desc#3.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-            <img th:src="@{/assets/img/testimonials/testimonials-3.jpg}"
-                 src="../static/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-            <h3>Client#3</h3>
-            <h4>Store Owner</h4>
-          </div>
-
-          <div class="testimonial-item">
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Desc.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-            <img th:src="@{/assets/img/testimonials/testimonials-4.jpg}"
-                 src="../static/assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-            <h3>Client#4</h3>
-            <h4>Freelancer</h4>
-          </div>
-
-          <div class="testimonial-item">
-            <p>
-              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-              Desc.
-              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-            </p>
-            <img th:src="@{/assets/img/testimonials/testimonials-5.jpg}"
-                 src="../static/assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-            <h3>Client#5</h3>
-            <h4>Entrepreneur</h4>
-          </div>
+            <div class="owl-carousel clients-carousel">
+                <img src="assets/img/clients/client-1.png"
+                     th:src="@{/assets/img/clients/client-1.png}" alt="">
+                <img src="assets/img/clients/client-2.png"
+                     th:src="@{/assets/img/clients/client-2.png}" alt="">
+                <img src="assets/img/clients/client-3.png"
+                     th:src="@{/assets/img/clients/client-3.png}" alt="">
+                <img src="assets/img/clients/client-4.png"
+                     th:src="@{/assets/img/clients/client-4.png}" alt="">
+                <img src="assets/img/clients/client-5.png"
+                     th:src="@{/assets/img/clients/client-5.png}" alt="">
+                <img src="assets/img/clients/client-6.png"
+                     th:src="@{/assets/img/clients/client-6.png}" alt="">
+                <img src="assets/img/clients/client-7.png"
+                     th:src="@{/assets/img/clients/client-7.png}" alt="">
+                <img src="assets/img/clients/client-8.png"
+                     th:src="@{/assets/img/clients/client-8.png}" alt="">
+            </div>
 
         </div>
+    </section><!-- End Clients Section -->
 
-      </div>
-    </section><!-- End Testimonials Section -->
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team">
-      <div class="container">
+        <div class="container">
 
-        <div class="section-title" data-aos="fade-up">
-          <h2>Team</h2>
-          <p>Desc.</p>
+            <div class="section-title" data-aos="fade-up">
+                <div class="col-md-10 col-lg-8 center text-center">
+                    <div class="header-section">
+                        <h2 class="title">Our<span>Team</span></h2>
+                        <p class="description">There are many variations of passages of Lorem Ipsum available but the
+                            majority have suffered alteration in some injected humour</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+                    <div class="member">
+                        <img src="assets/img/team/team-1.jpg"
+                             th:src="@{/assets/img/team/team-1.jpg}" class="img-fluid" alt="">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Walter White</h4>
+                                <span>Chief Executive Officer</span>
+                            </div>
+                            <div class="social">
+                                <a href=""><i class="icofont-twitter"></i></a>
+                                <a href=""><i class="icofont-facebook"></i></a>
+                                <a href=""><i class="icofont-instagram"></i></a>
+                                <a href=""><i class="icofont-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member">
+                        <img src="assets/img/team/team-2.jpg"
+                             th:src="@{/assets/img/team/team-2.jpg}" class="img-fluid" alt="">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Sarah Jhonson</h4>
+                                <span>Product Manager</span>
+                            </div>
+                            <div class="social">
+                                <a href=""><i class="icofont-twitter"></i></a>
+                                <a href=""><i class="icofont-facebook"></i></a>
+                                <a href=""><i class="icofont-instagram"></i></a>
+                                <a href=""><i class="icofont-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="member">
+                        <img src="assets/img/team/team-3.jpg"
+                             th:src="@{/assets/img/team/team-3.jpg}" class="img-fluid" alt="">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>William Anderson</h4>
+                                <span>CTO</span>
+                            </div>
+                            <div class="social">
+                                <a href=""><i class="icofont-twitter"></i></a>
+                                <a href=""><i class="icofont-facebook"></i></a>
+                                <a href=""><i class="icofont-instagram"></i></a>
+                                <a href=""><i class="icofont-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="member">
+                        <img src="assets/img/team/team-4.jpg"
+                             th:src="@{/assets/img/team/team-4.jpg}" class="img-fluid" alt="">
+                        <div class="member-info">
+                            <div class="member-info-content">
+                                <h4>Amanda Jepson</h4>
+                                <span>Accountant</span>
+                            </div>
+                            <div class="social">
+                                <a href=""><i class="icofont-twitter"></i></a>
+                                <a href=""><i class="icofont-facebook"></i></a>
+                                <a href=""><i class="icofont-instagram"></i></a>
+                                <a href=""><i class="icofont-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
-
-        <div class="row">
-
-          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
-            <div class="member">
-              <img th:src="@{/assets/img/team/team-1.jpg}"
-                   src="../static/assets/img/team/team-1.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Walter White</h4>
-                  <span>Chief Executive Officer</span>
-                </div>
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="member">
-              <img th:src="@{/assets/img/team/team-2.jpg}"
-                   src="../static/assets/img/team/team-2.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Sarah Jhonson</h4>
-                  <span>Product Manager</span>
-                </div>
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="member">
-              <img th:src="@{/assets/img/team/team-3.jpg}"
-                   src="../static/assets/img/team/team-3.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>William Anderson</h4>
-                  <span>CTO</span>
-                </div>
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="member">
-              <img th:src="@{/assets/img/team/team-4.jpg}"
-                   src="../static/assets/img/team/team-4.jpg" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>Amanda Jepson</h4>
-                  <span>Accountant</span>
-                </div>
-                <div class="social">
-                  <a href=""><i class="icofont-twitter"></i></a>
-                  <a href=""><i class="icofont-facebook"></i></a>
-                  <a href=""><i class="icofont-instagram"></i></a>
-                  <a href=""><i class="icofont-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
     </section><!-- End Team Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Contact</h2>
-          <p>Desc.</p>
-        </div>
-
-        <div class="row no-gutters justify-content-center" data-aos="fade-up">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="icofont-google-map"></i>
-                <h4>Location:</h4>
-                <p>77 Nasr Street, Egypt</p>
-              </div>
-
-              <div class="email mt-4">
-                <i class="icofont-envelope"></i>
-                <h4>Email:</h4>
-                <p>info@example.com</p>
-              </div>
-
-              <div class="phone mt-4">
-                <i class="icofont-phone"></i>
-                <h4>Call:</h4>
-                <p>+022 87436728726</p>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <iframe style="border:0; width: 100%; height: 270px;"
-                    src="https://maps.gstatic.com/mapfiles/openhand_8_8.cu" frameborder="0" allowfullscreen></iframe>
-          </div>
-
-        </div>
-
-        <div class="row mt-5 justify-content-center" data-aos="fade-up">
-          <div class="col-lg-10">
-            <!--/*@thymesVar id="ContactUs" type="java"*/-->
-            <form role="form" class="php-email-form" th:action="@{/contactForm}"
-                  th:object="${ContactUs}" method="post">
-              <div class="form-row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" th:field="*{userName}"
-                         class="form-control" id="name" placeholder="Your Name"
-                         data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                  <div class="validate"></div>
+        <div class="container">
+            <div class="row mt-5 justify-content-center" data-aos="fade-up">
+                <div class="col-md-10 col-lg-8 center text-center">
+                    <div class="header-section">
+                        <h2 class="title">Our<span>Contacts</span></h2>
+                    </div>
                 </div>
-                <div class="col-md-6 form-group">
-                  <input type="email" th:field="*{userEmail}"
-                         class="form-control" name="email" id="email"
-                         placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                  <div class="validate"></div>
-                </div>
-              </div>
-              <div class="form-group">
-                <input class="form-control" data-msg="Please enter at least 8 chars of subject"
-                       data-rule="minlen:4" id="subject" name="subject"
-                       placeholder="Subject" th:field="*{subject}" type="text"/>
-                <div class="validate"></div>
-              </div>
-              <div class="form-group">
+
+                <!--  <div class="col-lg-10">
+                      <form role="form" class="php-email-form">
+                          <div class="form-row">
+                              <div class="col-md-6 form-group">
+                                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                                         data-rule="minlen:4" data-msg="Please enter at least 4 chars"/>
+                                  <div class="validate"></div>
+                              </div>
+                              <div class="col-md-6 form-group">
+                                  <input type="email" class="form-control" name="email" id="email"
+                                         placeholder="Your Email" data-rule="email"
+                                         data-msg="Please enter a valid email"/>
+                                  <div class="validate"></div>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                                     data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject"/>
+                              <div class="validate"></div>
+                          </div>
+                          <div class="form-group">
+                              <textarea class="form-control" name="message" rows="5" data-rule="required"
+                                        data-msg="Please write something for us" placeholder="Message"></textarea>
+                              <div class="validate"></div>
+                          </div>
+                          <div class="mb-3">
+                              <div class="loading">Loading</div>
+                              <div class="error-message"></div>
+                              <div class="sent-message">Your message has been sent. Thank you!</div>
+                          </div>
+                          <div class="">
+                              <button type="submit">Send Message</button>
+                          </div>
+                      </form>
+                  </div>-->
+                <div class="col-lg-10">
+                    <!--/*@thymesVar id="ContactUs" type="java"*/-->
+                    <form role="form" class="php-email-form" th:action="@{/contactForm}"
+                          th:object="${ContactUs}" method="post">
+                        <div class="form-row">
+                            <div class="col-md-6 form-group">
+                                <input type="text" name="name" th:field="*{userName}"
+                                       class="form-control" id="name" placeholder="Your Name"
+                                       data-rule="minlen:4" data-msg="Please enter at least 4 chars"/>
+                                <div class="validate"></div>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input type="email" th:field="*{userEmail}"
+                                       class="form-control" name="email" id="email"
+                                       placeholder="Your Email" data-rule="email"
+                                       data-msg="Please enter a valid email"/>
+                                <div class="validate"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" data-msg="Please enter at least 8 chars of subject"
+                                   data-rule="minlen:4" id="subject" name="subject"
+                                   placeholder="Subject" th:field="*{subject}" type="text"/>
+                            <div class="validate"></div>
+                        </div>
+                        <div class="form-group">
                 <textarea class="form-control"
                           th:field="*{message}" name="message" rows="5"
                           data-rule="required" data-msg="Please write something for us" placeholder="Message">
                 </textarea>
-                <div class="validate"></div>
-              </div>
-              <div class="mb-3">
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-          </div>
 
-        </div>
+                        </div>
+                        <div class="text-center">
+                            <button style="left: 3%;" type="submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
 
-      </div>
-    </section>
-    <!-- End Contact Section -->
 
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="footer-info">
-              <h3>LOGO</h3>
-              <p>
-                77 Nasr Street, Egypt <br>
-                Nasr City, Egypt<br><br>
-                <strong>Phone:</strong> +022 87436728726<br>
-                <strong>Email:</strong> info@example.com<br>
-              </p>
-              <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              </div>
             </div>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Let us inform you with all the updates</p>
-            <form th:action="@{/sendEmail}" method="post">
-              <input type="email" name="email"/> <input type="submit" value="Subscribe"/>
-            </form>
-
-          </div>
 
         </div>
-      </div>
+    </section><!-- End Contact Section -->
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-info">
+                        <h3>EnterComputer</h3>
+                        <p>
+                            77 Nasr Street, Egypt <br>
+                            Nasr City, Egypt<br><br>
+                            <strong>Phone:</strong> +02 61 54 34<br>
+                            <strong>Email:</strong> EC@example.com<br>
+                        </p>
+                        <div class="social-links mt-3">
+                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li>
+                            <i class="bx bx-chevron-right"></i>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <i class="bx bx-chevron-right"></i>
+                            <a href="#">About us</a>
+                        </li>
+                        <li>
+                            <i class="bx bx-chevron-right"></i>
+                            <a href="#">Solutions</a>
+                        </li>
+                        <li>
+                            <i class="bx bx-chevron-right"></i>
+                            <a href="#">Team</a>
+                        </li>
+                        <li>
+                            <i class="bx bx-chevron-right"></i>
+                            <a href="#">ContactUs</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web&Mobile Application</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">BusinessModel</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 footer-newsletter">
+                    <h4>Our Newsletter</h4>
+                    <p style="color: #9fcdff">Let Us inform you with any updates</p>
+                    <form th:action="@{/sendEmail}" method="post">
+                        <input type="email" name="email"/> <input type="submit" value="Subscribe"/>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>LOGO</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        Designed by <a href="#">Shaimaa</a>
-      </div>
+        <div class="copyright">
+            &copy; Copyright <strong><span>EnterComputer</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+            Designed by <a href="#">Shaimaa</a>
+        </div>
     </div>
-  </footer><!-- End Footer -->
+</footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script th:src="@{/assets/vendor/jquery/jquery.min.js}"></script>
-  <script th:src="@{/assets/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
-  <script th:src="@{/assets/vendor/jquery.easing/jquery.easing.min.js}"></script>
-  <script th:src="@{/assets/vendor/php-email-form/validate.js}"></script>
-  <script th:src="@{/assets/vendor/owl.carousel/owl.carousel.min.js}"></script>
-  <script th:src="@{/assets/vendor/isotope-layout/isotope.pkgd.min.js}"></script>
-  <script th:src="@{/assets/vendor/venobox/venobox.min.js}"></script>
-  <script th:src="@{/assets/vendor/aos/aos.js}"></script>
-
-  <!-- Template Main JS File -->
-  <script th:src="@{/assets/js/main.js}"></script>
-
+<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+<div th:replace="common.html :: foot"></div>
 </body>
-
 </html>

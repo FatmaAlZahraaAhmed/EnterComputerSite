@@ -1,40 +1,185 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
-	<title>swot</title>
-	<link rel="stylesheet" type="text/css" href="assets/css/swot.css">
+    <div th:replace="common.html :: theheader"></div>
 </head>
 <body>
 
-<div class="container">
-	<div id="strengths">
-		<h3>Strengths</h3>
-		<button id="sPlus" class="plus"><i></i><i></i></button>
-		<div id="strengthArea">
-		</div>
-	</div>
-	<div id="weaknesses">
-		<h3>Weaknesses</h3>
-		<button id="wPlus" class="plus"><i></i><i></i></button>
-		<div id="weaknessArea">
-		</div>
-	</div>
-	<div id="opportunities">
-		<h3>Opportunities</h3>
-		<button id="oPlus" class="plus"><i></i><i></i></button>
-		<div id="opportunityArea">
-		</div>
-	</div>
-	<div id="threats">
-		<h3>Threats</h3>
-		<button id="tPlus" class="plus"><i></i><i></i></button>
-		<div id="threatArea">
-		</div>
-	</div>
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+    <div class="container d-flex">
+        <div class="logo mr-auto">
+            <h1 class="text-light">
+                <a href="index.html">EnterComputer</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html"><img src="" alt="Logo" class="img-fluid"></a>-->
+        </div>
+        <nav class="nav-menu d-none d-lg-block">
+            <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li class="drop-down"><a href="#services">Solutions</a>
+                    <ul>
+                        <li><a href="#">ToDoList</a></li>
+                        <li><a href="#">Swot Analysis</a></li>
+                        <li><a href="#">TrackingEmployee</a></li>
+                        <li class="drop-down"><a href="#">Services</a>
+                            <ul>
+                                <li><a href="#">Web&Mobile Application</a></li>
+                                <li><a href="#">Marketing</a></li>
+                                <li><a href="#">Bussniess Model</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav><!-- .nav-menu -->
+    </div>
+</header><!-- End Header -->
+
+
+<div class="row" onload="onload()">
+    <div class="section t-lft">
+        <h4>Strengths</h4>
+        <textarea id="strength" onchange="changed()" class="strength"></textarea>
+    </div>
+    <div class="section t-rtl">
+        <h4>Weaknesses</h4>
+        <textarea id="weak" onchange="changed()" class="weak"></textarea>
+    </div>
+</div>
+<div class="row">
+    <div class="section b-lft">
+        <h4>Opportunities</h4>
+        <textarea id="opportunity" onchange="changed()" class="opportunity"></textarea>
+    </div>
+    <div class="section b-rtl">
+        <h4>Threats</h4>
+        <textarea id="threat" onchange="changed()" class="threat"></textarea>
+    </div>
+</div>
+<div class="s-btn">
+    <button>Login</button>
 </div>
 
-<script src="assets/vendor/jquery/jquery.min.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="js/swot.js"></script>
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-info">
+                        <h3>EnterComputer</h3>
+                        <p>
+                            77 Nasr Street, Egypt <br>
+                            Nasr City, Egypt<br><br>
+                            <strong>Phone:</strong> +02 61 54 34<br>
+                            <strong>Email:</strong> EC@example.com<br>
+                        </p>
+                        <div class="social-links mt-3">
+                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li>
+                            <i class="bx bx-chevron-right"></i>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <i class="bx bx-chevron-right"></i>
+                            <a href="#">About us</a>
+                        </li>
+                        <li>
+                            <i class="bx bx-chevron-right"></i>
+                            <a href="#">Solutions</a>
+                        </li>
+                        <li>
+                            <i class="bx bx-chevron-right"></i>
+                            <a href="#">Team</a>
+                        </li>
+                        <li>
+                            <i class="bx bx-chevron-right"></i>
+                            <a href="#">ContactUs</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web&Mobile Applicatio</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Markting</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">BussniessModel</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 footer-newsletter">
+                    <h4>Our Newsletter</h4>
+                    <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                    <form action="" method="post">
+                        <input type="email" name="email"><input type="submit" value="Subscribe">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="copyright">
+            &copy; Copyright <strong><span>EnterComputer</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+            Designed by <a href="#">Shaimaa</a>
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+
+<div th:replace="common.html :: foot">
+
+    <script>
+        function changed() {
+            var strengths = document.getElementById('strength').value;
+            var weaknesses = document.getElementById('weak').value;
+            var opportunities = document.getElementById('opportunity').value;
+            var threats = document.getElementById('threat').value;
+
+            window.localStorage.setItem('data', JSON.stringify({
+                strengths: strengths,
+                weaknesses: weaknesses,
+                opportunities: opportunities,
+                threats: threats,
+            }));
+        }
+
+        window.addEventListener('load', function () {
+            console.log('Loaded');
+            try {
+                var data = JSON.parse(window.localStorage.getItem('data'));
+            } catch (e) {
+                console.log('Error');
+                window.localStorage.setItem('data', '');
+                return;
+            }
+            document.getElementById('strength').value = data.strengths;
+            document.getElementById('weak').value = data.weaknesses;
+            document.getElementById('opportunity').value = data.opportunities;
+            document.getElementById('threat').value = data.threats;
+        });
+    </script>
+
+
 </body>
 </html>
