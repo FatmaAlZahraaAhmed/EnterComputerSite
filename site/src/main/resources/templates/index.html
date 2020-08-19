@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
-    <div th:replace="common.html :: theheader"></div>
+    <title>EnterComputer</title>
+    <div th:replace="common :: theheader"></div>
 </head>
 <body>
 <!-- ======= Header ======= -->
@@ -26,7 +27,7 @@
                             <ul>
                                 <li><a href="#">Web&Mobile Application</a></li>
                                 <li><a href="#">Marketing</a></li>
-                                <li><a href="#">Bussniess Model</a></li>
+                                <li><a href="#">Business Model</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -44,7 +45,7 @@
         <div class="row justify-content-center align-self-center" data-aos="fade-up">
             <div class="col-md-6 intro-info order-md-first order-last" data-aos="zoom-in" data-aos-delay="100">
                 <h2>EnterComputer Solutions<br>for Your <span>Business!</span></h2>
-                <a href="login.html" class="loin-btn">Get Started</a>
+                <a href="getStarted.html" class="loin-btn">Get Started</a>
             </div>
 
 
@@ -91,7 +92,8 @@
             <div class="row">
                 <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
                     <div class="why-us-img">
-                        <img src="assets/img/why-us.jpg" th:src="@{/assets/img/why-us.jpg}" alt="" class="img-fluid">
+                        <img src="assets/img/why-us.jpg"
+                             th:src="@{/assets/img/why-us.jpg}" alt="" class="img-fluid">
                     </div>
                 </div>
 
@@ -162,7 +164,8 @@
                     <div class="tab-content">
                         <div class="tab-pane active show" id="tab-1">
                             <figure>
-                                <img src="assets/img/features-1.png" th:src="@{/assets/img/features-1.png}" alt=""
+                                <img src="assets/img/features-1.png"
+                                     th:src="@{/assets/img/features-1.png}" alt=""
                                      class="img-fluid">
                             </figure>
                         </div>
@@ -318,7 +321,7 @@
 
             <div class="owl-carousel clients-carousel">
                 <img src="assets/img/clients/client-1.png"
-                     th:src="@{/assets/img/clients/client-1.png}" alt="">
+                     th:src="@{/assets/img/clients/client-1.png}" alt=""/>
                 <img src="assets/img/clients/client-2.png"
                      th:src="@{/assets/img/clients/client-2.png}" alt="">
                 <img src="assets/img/clients/client-3.png"
@@ -606,6 +609,6 @@
 </footer><!-- End Footer -->
 
 <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
-<div th:replace="common.html :: foot"></div>
+<div th:replace="common :: foot"></div>
 </body>
 </html>

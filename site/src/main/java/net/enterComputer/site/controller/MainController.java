@@ -1,9 +1,11 @@
 package net.enterComputer.site.controller;
 
 import net.enterComputer.site.model.ContactUs;
+import net.enterComputer.site.model.RegisterAccount;
 import net.enterComputer.site.model.Subscriber;
 import net.enterComputer.site.model.ToDo;
 import net.enterComputer.site.repositroy.ContactUsRepository;
+import net.enterComputer.site.service.AccountServiceImpl;
 import net.enterComputer.site.service.ContactUsServiceImpl;
 import net.enterComputer.site.service.SendEmailService;
 import net.enterComputer.site.service.ToDoService;
@@ -20,14 +22,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class MainController {
 
     @Autowired
-    private ContactUsRepository repository;
-    @Autowired
     private ContactUsServiceImpl contactUsServiceImpl;
     @Autowired
     private SendEmailService sendEmailService;
     @Autowired
     private ToDoService toDoService;
-
+    @Autowired
+    private AccountServiceImpl accountService;
 
     //accept new income
     @GetMapping(path = {"/", "/index.html"})
@@ -36,6 +37,17 @@ public class MainController {
         return "index";
     }
 
+    @GetMapping("/getStarted.html")
+    public String viewGetStarted(Model model) {
+        model.addAttribute("RegisterAccount", new RegisterAccount());
+        return "getStarted";
+    }
+
+    @PostMapping("/register")
+    public String submitRegister(@ModelAttribute("RegisterAccount") RegisterAccount account) {
+        accountService.saveNewAccount(account);
+        return "index";
+    }
 
     @PostMapping("/contactForm")
     public String submitConForm(@ModelAttribute("ContactUs") ContactUs contactUs,
@@ -58,7 +70,7 @@ public class MainController {
         return "tdl";
     }
 
-    //submit btn to add new ToDo
+    //submit btn to add new To-Do
     @GetMapping("/showNewTodoForm")
     public String showNewTodoForm(Model model) {
         ToDo toDo = new ToDo();

@@ -3,11 +3,10 @@
 <body>
 <div th:fragment="theheader">
 <!--    use this -->
-<!--    <div th:replace="common.html :: theheader"></div> -->
+<!--    <div th:replace="common :: theheader"></div> -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>EnterComputer</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -28,7 +27,7 @@
 
     <!--  CSS File -->
     <link th:href="@{/assets/css/style.css}" rel="stylesheet">
-
+<!--    <link rel="stylesheet" type="text/css" th:href="@{assets/css/login.css}">-->
     <!-- =======================================================
     * Project Name:
     * Project URL:
@@ -37,7 +36,7 @@
 </div>
 <div th:fragment="foot">
 <!--    use this -->
-<!--    <div th:replace="common.html :: foot"></div>  -->
+<!--    <div th:replace="common :: foot"></div>  -->
     <!-- Vendor JS Files -->
     <script th:src="@{/assets/vendor/jquery/jquery.min.js}"></script>
     <script th:src="@{/assets/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
@@ -49,6 +48,7 @@
 
     <!-- Template Main JS File -->
     <script th:src="@{/assets/js/main.js}"></script>
+<!--    <script src="assets/js/login.js"></script>  -->
 </div>
 </body>
 </html>
