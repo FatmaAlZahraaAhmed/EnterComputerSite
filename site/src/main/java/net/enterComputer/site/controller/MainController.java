@@ -1,10 +1,9 @@
 package net.enterComputer.site.controller;
 
 import net.enterComputer.site.model.*;
-import net.enterComputer.site.repositroy.ContactUsRepository;
 import net.enterComputer.site.service.AccountServiceImpl;
 import net.enterComputer.site.service.ContactUsServiceImpl;
-import net.enterComputer.site.service.SendEmailService;
+import net.enterComputer.site.service.SendEmailServiceImpl;
 import net.enterComputer.site.service.ToDoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,7 +20,7 @@ public class MainController {
     @Autowired
     private ContactUsServiceImpl contactUsServiceImpl;
     @Autowired
-    private SendEmailService sendEmailService;
+    private SendEmailServiceImpl sendEmailServiceImpl;
     @Autowired
     private ToDoService toDoService;
     @Autowired
@@ -68,7 +67,7 @@ public class MainController {
 
     @PostMapping("/sendEmail")
     public String sendEmail(@ModelAttribute("Subscriber") Subscriber subscriber) {
-        sendEmailService.sendEmail(subscriber);
+        sendEmailServiceImpl.sendEmail(subscriber);
         return "send-message";
     }
 
