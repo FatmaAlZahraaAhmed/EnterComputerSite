@@ -14,16 +14,27 @@
     </div>
     <div class="login">
         <h2>Login To Your Account</h2>
-        <form>
+        <div th:if="${param.error}">
+            Invalid username and password.
+        </div>
+        <!--<div th:if="${param.logout}">
+            You have been logged out.
+        </div>-->
+        <form th:action="@{/login}" method="post">
+            <div><input type="text" placeholder="User Name" name="username"/></div>
+            <div><input type="password" placeholder="password" name="password"/></div>
+            <div><input type="submit" value="Sign In"/></div>
+        </form>
+        <!--<form>
             <input type="text" placeholder="Username"/>
             <input type="password" placeholder="Password"/>
             <button>Login</button>
-        </form>
+        </form>-->
     </div>
     <div class="register">
         <h2>Create An Account</h2>
         <form role="form" method="post" th:action="@{/register}"
-        th:object="${RegisterAccount}">
+              th:object="${RegisterAccount}">
             <input type="text" placeholder="Username" th:field="*{user_name}"/>
             <input type="password" placeholder="Password" th:field="*{user_password}"/>
             <input type="email" placeholder="Email Address" th:field="*{user_email}"/>

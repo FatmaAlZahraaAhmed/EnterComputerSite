@@ -17,7 +17,11 @@ public class SendEmailService {
         newMessage.setTo(subscriber.getEmail());
         newMessage.setFrom("totanoni25@gmail.com");
         newMessage.setSubject("Welcome Subscriber");
-        newMessage.setText("Hi, and greetings from fatima,shaimaa and esraa");
+        newMessage.setText("Hi, and Greetings" +
+                "This is our site EnterComputer for Software Solution" +"\n"+
+                "created by Eng.Fatima Alzahraa," +"\n"+
+                "Eng.Shaimaa And Eng.Esraa." +"\n"+
+                "Thank you");
         javaMailSender.send(newMessage);
         System.out.println("send...ok");
     }

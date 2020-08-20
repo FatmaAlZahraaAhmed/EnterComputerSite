@@ -1,9 +1,6 @@
 package net.enterComputer.site.controller;
 
-import net.enterComputer.site.model.ContactUs;
-import net.enterComputer.site.model.RegisterAccount;
-import net.enterComputer.site.model.Subscriber;
-import net.enterComputer.site.model.ToDo;
+import net.enterComputer.site.model.*;
 import net.enterComputer.site.repositroy.ContactUsRepository;
 import net.enterComputer.site.service.AccountServiceImpl;
 import net.enterComputer.site.service.ContactUsServiceImpl;
@@ -43,10 +40,23 @@ public class MainController {
         return "getStarted";
     }
 
+    @GetMapping("/getStarted")
+    public String viewLogin(Model model) {
+        model.addAttribute("RegisterAccount", new RegisterAccount());
+        return "getStarted";
+    }
+
+
     @PostMapping("/register")
     public String submitRegister(@ModelAttribute("RegisterAccount") RegisterAccount account) {
         accountService.saveNewAccount(account);
-        return "index";
+        return "success-reg";
+    }
+
+    @GetMapping("/swot.html")
+    public String viewSwot(Model model) {
+        model.addAttribute("SWOT", new SWOT());
+        return "swot";
     }
 
     @PostMapping("/contactForm")
