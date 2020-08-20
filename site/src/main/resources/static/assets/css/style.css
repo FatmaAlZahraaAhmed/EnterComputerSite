@@ -506,7 +506,8 @@ p {
   width: 100%;
   height: 100vh;
   position: relative;
-  background: #f5f8fd url("../img/intro-bg.jpg") center top no-repeat;
+  background: #f5f8fd center top no-repeat;
+  /*url("../img/intro-bg.jpg")*/
   background-size: cover;
 }
 #hero .intro-img{
@@ -605,7 +606,7 @@ button {
 }
 
 button:hover {
-  opacity 0.8;
+  opacity :0.8;
   box-shadow: 0 2px 5px #9a9a9a;
   color: #fff;
 }
@@ -780,7 +781,7 @@ section {
 }
 .features ul li{
   font-size: 22px;
-  color: ;
+  /*color: ;*/
   margin-top: 32px;
   text-align: center;
   cursor: default;
@@ -822,7 +823,7 @@ a,p,h1,h2,h3,h4,ul {
   padding-top: 110px;
   padding-bottom: 120px;
   font-family: "Poppins", sans-serif;
-  background-color: ;
+  /*background-color: ;*/
   box-shadow: 3px 3px 5px 6px #ccc;
   
 }
@@ -883,7 +884,7 @@ a,p,h1,h2,h3,h4,ul {
 
 .section-services .single-service {
   margin-top: 40px;
-  background-color: #;
+  /*background-color: #;*/
   box-shadow: 0 0 10px 0 #cccccc;
 }
 
@@ -1124,7 +1125,7 @@ a,p,h1,h2,h3,h4,ul {
 }
 
 .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
-  background: ##1bb1dc;
+  background:#1bb1dc;
   color: #fff;
 }
 
@@ -1219,7 +1220,7 @@ a,p,h1,h2,h3,h4,ul {
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-  background: #;
+  /*background: #;*/
 }
 
 @-webkit-keyframes animate-loading {
