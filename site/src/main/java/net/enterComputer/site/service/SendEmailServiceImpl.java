@@ -1,5 +1,6 @@
 package net.enterComputer.site.service;
 
+import net.enterComputer.site.model.RegisterAccount;
 import net.enterComputer.site.model.SWOT;
 import net.enterComputer.site.model.Subscriber;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,8 +28,5 @@ public class SendEmailServiceImpl implements SendEmailService {
         System.out.println("send...ok");
     }
 
-    @Override
-    public void sendSWOT(SWOT swot) {
 
-    }
 }

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <title>Marketing</title>
+  <div th:replace="common :: theheader"></div>
+    <link th:href="@{assets/css/marketing.css}"
+          type="text/css" src="assets/css/marketing.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex">
+      <div class="logo mr-auto">
+        <h1 class="text-light">
+          <a href="index.html">EnterComputer</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="" alt="Logo" class="img-fluid"></a>-->
+      </div>
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li class="drop-down"><a href="#services">Solutions</a>
+            <ul>
+              <li><a href="tdl.html">ToDoList</a></li>
+              <li><a href="swot.html">Swot Analysis</a></li>
+              <li><a href="#">TrackingEmployee</a></li>
+              <li class="drop-down"><a href="#">Services</a>
+            <ul>
+                  <li><a href="#">Web&Mobile Application</a></li>
+                  <li><a href="Marketing.html">Marketing</a></li>
+                  <li><a href="#">Business Model</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="clearfix">
+    <div class="container d-flex h-100">
+      <div class="row justify-content-center align-self-center" data-aos="fade-up">
+        <div class="col-md-6 intro-info order-md-first order-last" data-aos="zoom-in" data-aos-delay="100">
+          <h2>Marketing<br><span>Services!</span></h2>
+          <p>Attracting and enrolling the right students is more challenging and competitive than ever before. Creating a highly customized, targeted strategy backed by research and data is the best way to maximize your recruiting efforts.</p>
+          <a href="getStarted.html" class="loin-btn">Get Started</a>
+       </div>
+        
+        <div class="col-md-6 intro-img order-md-last order-first" data-aos="zoom-out" data-aos-delay="200">
+          <img src="assets/img/market/RS_MS.png" th:src="@{assets/img/market/RS_MS.png}" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+ 
+
+ <!-- ====== OurMarketing ======= -->
+ <section class="ourmaket">
+  <div class="container">
+    <div class="text-center">
+    <h3 >Proven Track Record of Helping Institutions Grow</h3>
+    <p >Our education digital marketing experts will make your investment have a measurable return.</p>
+  </div>
+     <div class="row">
+    <div class="col-lg-6">
+      <div class="box">
+        <i class='bx bxs-check-circle'></i>
+        <h4>Transparency</h4>
+        <p>Stay informed and in control with full visibility into marketing metrics and results. </p>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="box">
+        <i class='bx bxs-check-circle'></i>
+        <h4>Flexibility</h4>
+        <p>Solutions tailored to your institution's strategic goals.</p>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="box">
+        <i class='bx bxs-check-circle'></i>
+        <h4>ROI</h4>
+        <p>Data-driven marketing performance measurement and analysis.</p>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="box">
+        <i class='bx bxs-check-circle'></i>
+        <h4>Expertise</h4>
+        <p>Leverage our years of higher ed experience and industry knowledge</p>
+      </div>
+    </div>
+  </div>
+  </div>
+   
+ </section>
+   
+  <section id="features" class="features">
+      <div class="container">
+        <div class="row">
+             <div class="col-lg-6 ml-auto" data-aos="fade-left">
+            <div class="tab-content ">
+              <figure>
+                <img src="assets/img/market/header.png"
+                th:src="@{assets/img/market/header.png}">
+              </figure>
+            </div>
+          </div>
+          <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+            <ul class="nav nav-tabs flex-column">
+              <a class="nav-link active show" data-toggle="tab" href="#tab-1">
+                  <h2>Our Marketing & Recruiting Management Solutions Include Services Such as:</h2>
+                </a>
+    
+              <li>Program Area & Viability Research</li>
+              <li>Competitive Assessments</li>
+              <li>Strategic Marketing Planning</li>
+              <li>Creative Development</li>
+              <li>Media Planning, Buying, Management & Optimization</li>
+              <li>Content Strategy & Support</li>
+              <li>Search Engine Optimization Strategy & Support</li>
+             
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Features Section -->
+
+
+     <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing section-bg wow fadeInUp">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h3>Pricing</h3>
+          <p>Learn more about what our marketing services can do for your institution.</p>
+        </div>
+
+        <div class="row flex-items-xs-middle flex-items-xs-center">
+
+          <!-- Basic Plan  -->
+          <div class="col-xs-12 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="card">
+              <div class="card-header">
+                <h3><span class="currency">$</span>19<span class="period">/month</span></h3>
+              </div>
+              <div class="card-block">
+                <h4 class="card-title">
+                  Basic Plan
+                </h4>
+                <ul class="list-group">
+                  <li class="list-group-item">Odio animi voluptates</li>
+                  <li class="list-group-item">Inventore quisquam et</li>
+                  <li class="list-group-item">Et perspiciatis suscipit</li>
+                  <li class="list-group-item">24/7 Support System</li>
+                </ul>
+                <a href="#" class="btn">Choose Plan</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Regular Plan  -->
+          <div class="col-xs-12 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <div class="card-header">
+                <h3><span class="currency">$</span>29<span class="period">/month</span></h3>
+              </div>
+              <div class="card-block">
+                <h4 class="card-title">
+                  Regular Plan
+                </h4>
+                <ul class="list-group">
+                  <li class="list-group-item">Odio animi voluptates</li>
+                  <li class="list-group-item">Inventore quisquam et</li>
+                  <li class="list-group-item">Et perspiciatis suscipit</li>
+                  <li class="list-group-item">24/7 Support System</li>
+                </ul>
+                <a href="#" class="btn">Choose Plan</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Premium Plan  -->
+          <div class="col-xs-12 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+              <div class="card-header">
+                <h3><span class="currency">$</span>39<span class="period">/month</span></h3>
+              </div>
+              <div class="card-block">
+                <h4 class="card-title">
+                  Premium Plan
+                </h4>
+                <ul class="list-group">
+                  <li class="list-group-item">Odio animi voluptates</li>
+                  <li class="list-group-item">Inventore quisquam et</li>
+                  <li class="list-group-item">Et perspiciatis suscipit</li>
+                  <li class="list-group-item">24/7 Support System</li>
+                </ul>
+                <a href="#" class="btn">Choose Plan</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- End Pricing Section -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>EnterComputer</h3>
+              <p>
+                77 Nasr Street, Egypt <br>
+                Nasr City, Egypt<br><br>
+                <strong>Phone:</strong> +02 61 54 34<br>
+                <strong>Email:</strong> EC@example.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li>
+                <i class="bx bx-chevron-right"></i>
+                 <a href="#">Home</a>
+               </li>
+              <li>
+                <i class="bx bx-chevron-right"></i>
+                 <a href="#">About us</a>
+               </li>
+              <li>
+                <i class="bx bx-chevron-right"></i> 
+                <a href="#">Solutions</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i> 
+                <a href="#">Team</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i> 
+                <a href="#">ContactUs</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web&Mobile Applicatio</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Markting</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">BussniessModel</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <div th:replace="common :: Subscribe"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>EnterComputer</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="#">Shaimaa</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <div th:replace="common :: foot"></div>
+</body>
+</html>

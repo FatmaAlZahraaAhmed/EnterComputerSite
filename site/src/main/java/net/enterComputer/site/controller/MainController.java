@@ -1,10 +1,7 @@
 package net.enterComputer.site.controller;
 
 import net.enterComputer.site.model.*;
-import net.enterComputer.site.service.AccountServiceImpl;
-import net.enterComputer.site.service.ContactUsServiceImpl;
-import net.enterComputer.site.service.SendEmailServiceImpl;
-import net.enterComputer.site.service.ToDoService;
+import net.enterComputer.site.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,6 +22,8 @@ public class MainController {
     private ToDoService toDoService;
     @Autowired
     private AccountServiceImpl accountService;
+    @Autowired
+    private SwotServiceImpl swotService;
 
     //accept new income
     @GetMapping(path = {"/", "/index.html"})
@@ -56,6 +55,17 @@ public class MainController {
     public String viewSwot(Model model) {
         model.addAttribute("SWOT", new SWOT());
         return "swot";
+    }
+
+    @PostMapping("/swot")
+    public String submitSwot(@ModelAttribute("SWOT") SWOT swot) {
+        swotService.saveSWOT(swot);
+        return "save-swot";
+    }
+
+    @GetMapping("/Marketing.html")
+    public String getMarketing() {
+        return "Marketing";
     }
 
     @PostMapping("/contactForm")

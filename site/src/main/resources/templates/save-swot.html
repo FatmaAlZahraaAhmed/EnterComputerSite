@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>save swot</title>
+    <div th:replace="common :: theheader"></div>
+</head>
+<body style="background-color: #f5f8fd">
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+    <div class="container d-flex">
+        <div class="logo mr-auto">
+            <h1 class="text-light">
+                <a href="index.html">EnterComputer</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html"><img src="" alt="Logo" class="img-fluid"></a>-->
+        </div>
+        <nav class="nav-menu d-none d-lg-block">
+            <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li class="drop-down"><a href="#services">Solutions</a>
+                    <ul>
+                        <li><a href="#">ToDoList</a></li>
+                        <li><a href="#">Swot Analysis</a></li>
+                        <li class="drop-down"><a href="#">Services</a>
+                            <ul>
+                                <li><a href="#">Markting</a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                                <li><a href="#"></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav><!-- .nav-menu -->
+    </div>
+</header><!-- End Header -->
+
+
+<div align="center">
+    <h3 style="margin-top: 108px; ">You Successfully Saved A SWOT!!! </h3>
+    <a th:href="@{index.html}" class="btn btn-primary btn-lg active"
+       role="button" aria-pressed="true"
+       style="margin-top: 70px; ">Get To Home Page Now</a>
+</div>
+<div th:replace="common :: foot"></div>
+
+</body>
+
+</html>

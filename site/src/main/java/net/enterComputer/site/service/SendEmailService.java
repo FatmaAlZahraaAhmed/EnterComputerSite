@@ -5,5 +5,4 @@ import net.enterComputer.site.model.Subscriber;
 
 public interface SendEmailService {
     void sendEmail(Subscriber subscriber);
-    void sendSWOT(SWOT swot);
 }

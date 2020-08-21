@@ -6,20 +6,36 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-
-
-@import url(https://fonts.googleapis.com/css?family=Roboto);
-
 body {
+   font-family: 'Raleway', sans-serif;
+    color: #444444;
+    background-color: #f5f8fd;
+}
+button {
+  text-align: center;
+  padding: 10px 20px;
   font-family: "Open Sans", sans-serif;
-  color: #444444;
-  background-color: #f5f8fd;
+  background-color: #42A5ff;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  outline: none;
+}
+
+button:hover {
+  opacity: 0.8;
+  box-shadow: 0 2px 5px #9a9a9a;
+  color: #fff;
 }
 a {
   color: #fff;
 }
+
 a:hover {
-  color: #1bb1dc;
+  color: #42A5ff;
   text-decoration: none;
 }
 
@@ -55,11 +71,11 @@ p {
   transform: translateX(-50%);
   width: 45px;
   height: 3px;
-  background-color: #1bb1dc;
+  background-color: #42A5ff;
 }
 
 .header-section .title span {
-  color: #1bb1dc;
+  color: #42A5ff;
 }
 
 .header-section .description {
@@ -92,7 +108,8 @@ p {
   position: relative;
 }
 
-.loginmodal-container input[type=text], input[type=password] {
+.loginmodal-container input[type=text],
+ input[type=password] {
   height: 44px;
   font-size: 16px;
   width: 100%;
@@ -309,7 +326,7 @@ p {
 .nav-menu a:hover,
 .nav-menu .active > a,
 .nav-menu li:hover > a {
-  color: #1bb1dc;
+  color: #42A5ff;
 }
 
 .nav-menu .drop-down ul {
@@ -341,13 +358,13 @@ p {
   font-size: 14px;
   font-weight: 500;
   text-transform: none;
-  color: #062822;
+  color: #6f6f71;
 }
 
 .nav-menu .drop-down ul a:hover,
 .nav-menu .drop-down ul .active > a,
 .nav-menu .drop-down ul li:hover > a {
-  color: #1bb1dc;
+  color: #42A5ff;
 }
 
 .nav-menu .drop-down > a:after {
@@ -435,7 +452,7 @@ p {
 .mobile-nav a {
   display: block;
   position: relative;
-  color: #21413c;
+  color: #6f6f71;
   padding: 10px 20px;
   font-weight: 500;
   outline: none;
@@ -444,7 +461,7 @@ p {
 .mobile-nav a:hover,
 .mobile-nav .active > a,
 .mobile-nav li:hover > a {
-  color: #1bb1dc;
+  color: #42A5ff;
   text-decoration: none;
 }
 
@@ -506,7 +523,7 @@ p {
   width: 100%;
   height: 100vh;
   position: relative;
-  background: #f5f8fd center top no-repeat;
+  background: #f5f8fd  center top no-repeat;
   /*url("../img/intro-bg.jpg")*/
   background-size: cover;
 }
@@ -547,7 +564,7 @@ p {
 }
 
 #hero .intro-info h2 span {
-  color: #1bb1dc;
+  color: #42A5ff;
 }
 
 @media (max-width: 767px) {
@@ -568,7 +585,7 @@ p {
   border-radius: 4px;
   transition: 0.5s;
   color: #fff;
-  background: #1bb1dc;
+  background: #42A5ff;
   color: #fff;
 }
 
@@ -586,30 +603,7 @@ p {
   z-index: 2;
 }
 
-button {
-  position: relative;
-  left: 50%;
-  top: 50%;
-  height: 70px;
-  margin: -35px 0 0 -100px;
-  padding: 15px 30px;
-  border-radius: 5px;
-  background-color: #ceaee8;
-  color: #fff;
-  font-size: 1.5em;
-  cursor: pointer;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  outline: none;
-}
 
-button:hover {
-  opacity :0.8;
-  box-shadow: 0 2px 5px #9a9a9a;
-  color: #fff;
-}
 .loin-btn{
     background: #42A5ff;
     padding: 10px 22px;
@@ -790,6 +784,9 @@ section {
   -webkit-animation: slide-down 0.5s ease-out;
   animation: slide-down 0.5s ease-out;
 }
+figure{
+  float: right;
+}
 
 @-webkit-keyframes slide-down {
   0% {
@@ -803,6 +800,7 @@ section {
 @keyframes slide-down {
   0% {
     opacity: 0;
+
   }
   100% {
     opacity: 1;
@@ -835,6 +833,7 @@ a,p,h1,h2,h3,h4,ul {
 
 .single-service:hover{
   background-color: #42a5ff63;
+  transition: .5s;
 
 }
 
@@ -858,7 +857,7 @@ a,p,h1,h2,h3,h4,ul {
   transform: translateX(-50%);
   width: 140px;
   height: 1px;
-  background-color: #1bb1dc;
+  background-color: #42A5ff;
 }
 
 
@@ -870,7 +869,7 @@ a,p,h1,h2,h3,h4,ul {
   transform: translateX(-50%);
   width: 45px;
   height: 3px;
-  background-color: #1bb1dc;
+  background-color: #42A5ff;
 }
 
 
@@ -961,7 +960,7 @@ a,p,h1,h2,h3,h4,ul {
 }
 
 #clients .owl-dot.active {
-  background-color: #1bb1dc;
+  background-color: #42A5ff;
 }
 
 
@@ -1120,12 +1119,12 @@ a,p,h1,h2,h3,h4,ul {
 }
 
 .contact .info .social-links a:hover {
-  background: #1bb1dc;
+  background: #42A5ff;
   color: #fff;
 }
 
 .contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
-  background:#1bb1dc;
+  background: #42A5ff;
   color: #fff;
 }
 
@@ -1209,7 +1208,7 @@ a,p,h1,h2,h3,h4,ul {
 
 .contact .php-email-form button[type="submit"] {
   font-size: 18px;
-  background: #1bb1dc;
+  background: #42A5ff;
   border: 0;
   padding: 10px 24px;
   color: #fff;
@@ -1280,7 +1279,7 @@ a,p,h1,h2,h3,h4,ul {
 #footer .footer-top .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #1bb1dc;
+  background: #42A5ff;
   color: #fff;
   line-height: 1;
   padding: 8px 0;
@@ -1293,7 +1292,7 @@ a,p,h1,h2,h3,h4,ul {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #1bb1dc;
+  background: #42A5ff;
   color: #fff;
   text-decoration: none;
 }
@@ -1318,7 +1317,7 @@ a,p,h1,h2,h3,h4,ul {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #1bb1dc;
+  color: #42A5ff;
   font-size: 18px;
   line-height: 1;
 }
@@ -1341,7 +1340,7 @@ a,p,h1,h2,h3,h4,ul {
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: #1bb1dc;
+  color: #42A5ff;
 }
 
 #footer .footer-top .footer-newsletter form {
@@ -1351,7 +1350,9 @@ a,p,h1,h2,h3,h4,ul {
   position: relative;
   border-radius: 4px 0 0 4px;
 }
-
+#footer .footer-top .footer-newsletter p{
+  color: #ffffff;
+}
 #footer .footer-top .footer-newsletter form input[type="email"] {
   border: 0;
   padding: 4px;
@@ -1367,14 +1368,14 @@ a,p,h1,h2,h3,h4,ul {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #1bb1dc;
+  background: #42A5ff;
   color: #fff;
   transition: 0.3s;
   border-radius: 0 4px 4px 0;
 }
 
 #footer .footer-top .footer-newsletter form input[type="submit"]:hover {
-  background: #1bb1dc;
+  background: #42A5ff;
 }
 
 #footer .copyright {

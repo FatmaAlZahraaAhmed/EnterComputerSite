@@ -3,8 +3,8 @@
 <head>
     <title>SWOT</title>
     <div th:replace="common :: theheader"></div>
-</head>
-<body >
+    <link rel="stylesheet" type="text/css" th:href="@{assets/css/swot.css}">
+<body>
 
 <!-- ======= Header ======= -->
 <header id="header" class="fixed-top">
@@ -38,67 +38,35 @@
             </ul>
         </nav><!-- .nav-menu -->
     </div>
-</header>
-<!-- End Header -->
+</header><!-- End Header -->
 
-<section id="about" class="about">
-    <div class="container">
-        <form role="form" class="form-control"
-              th:action="@{/swot}" th:object="${SWOT}" method="post">
-            <div class="row">
-                <!-- onload="onload()"
-                onchange="changed()"
-                onchange="changed()"
-                onchange="changed()"
-                -->
-                <div class="section t-lft">
-                    <h4>Strengths</h4>
-                    <textarea th:field="*{strength}" id="strength"
-                              placeholder="what makes you unique"
-                              class="strength">
-                </textarea>
-                </div>
-                <div class="section t-rtl">
-                    <h4>Weaknesses</h4>
-                    <textarea th:field="*{weakness}" id="weak" placeholder="what's might slow you" onchange="changed()"
-                              class="weak">
 
-                </textarea>
-                </div>
+<!-- ======= SWOT ======= -->
+<div class="container">
+    <section class="swot">
+        <div class="header-section">
+            <h3 class="title">SWOT<span>ANALYSIS</span></h3>
+        </div>
+        <form method="post" role="form" th:action="@{/swot}" th:object="${SWOT}">
+            <textarea th:field="*{strength}" placeholder="Strength, What Makes U Unique"></textarea>
+            <textarea th:field="*{weakness}" placeholder="Weakness, What Holds U Back"></textarea>
+            <textarea th:field="*{opportunity}"
+                      placeholder="Opportunity, Situations Or Set Of Circumstances That Makes It Possible To DO Thomthing"></textarea>
+            <textarea th:field="*{threat}" placeholder="Threat, Potential Damage"></textarea>
+
+            <div class="text-center s-btn">
+                <button type="submit">Send To My Email</button>
             </div>
-            <div class="row">
-                <div class="section b-lft">
-                    <h4>Opportunities</h4>
-                    <textarea th:field="*{opportunity}" id="opportunity"
-                              placeholder="some advantages"
-                              class="opportunity">
-
-                </textarea>
-                </div>
-                <div class="section b-rtl">
-                    <h4>Threats</h4>
-                    <textarea th:field="*{threat}" id="threat"
-                              placeholder="potential opponents"
-                              class="threat">
-
-                </textarea>
-                </div>
-            </div>
-            <div class="s-btn">
-                <button type="submit">Send it to my email</button>
-            </div>
-
         </form>
-    </div>
-</section>
+    </section>
+</div>
 
-<!--
- ======= Footer =======
+</div>
+<!-- ======= Footer ======= -->
 <footer id="footer">
     <div class="footer-top">
         <div class="container">
             <div class="row">
-
                 <div class="col-lg-3 col-md-6">
                     <div class="footer-info">
                         <h3>EnterComputer</h3>
@@ -135,28 +103,24 @@
                         </li>
                         <li>
                             <i class="bx bx-chevron-right"></i>
-                            <a href="#">Team</a>
+                            <a href="#team">Team</a>
                         </li>
                         <li>
                             <i class="bx bx-chevron-right"></i>
-                            <a href="#">ContactUs</a></li>
+                            <a href="#contact">ContactUs</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 footer-links">
                     <h4>Our Services</h4>
                     <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web&Mobile Applications</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">BusinessModel</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web&Mobile Applicatio</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Markting</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">BussniessModel</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-4 col-md-6 footer-newsletter">
-                    <h4>Our Newsletter</h4>
-                    <p style="color: #9fcdff">Let Us inform you with any updates</p>
-                    <form th:action="@{/sendEmail}" method="post">
-                        <input type="email" name="email"/> <input type="submit" value="Subscribe"/>
-                    </form>
+                    <div th:replace="common :: Subscribe"></div>
                 </div>
             </div>
         </div>
@@ -170,48 +134,12 @@
             Designed by <a href="#">Shaimaa</a>
         </div>
     </div>
-</footer>
- End Footer
--->
+</footer><!-- End Footer -->
 
-<!--<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>-->
+<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
 
-<div th:replace="common :: foot"></div>
-<!--
-
-<script>
-    function changed() {
-        var strengths = document.getElementById('strength').value;
-        var weaknesses = document.getElementById('weak').value;
-        var opportunities = document.getElementById('opportunity').value;
-        var threats = document.getElementById('threat').value;
-
-        window.localStorage.setItem('data', JSON.stringify({
-            strengths: strengths,
-            weaknesses: weaknesses,
-            opportunities: opportunities,
-            threats: threats,
-        }));
-    }
-
-    window.addEventListener('load', function () {
-        console.log('Loaded');
-        try {
-            var data = JSON.parse(window.localStorage.getItem('data'));
-        } catch (e) {
-            console.log('Error');
-            window.localStorage.setItem('data', '');
-            return;
-        }
-        document.getElementById('strength').value = data.strengths;
-        document.getElementById('weak').value = data.weaknesses;
-        document.getElementById('opportunity').value = data.opportunities;
-        document.getElementById('threat').value = data.threats;
-    });
-</script>
--->
-
+<div th:replace="common :: footscript"></div>
 
 </body>
 </html>
