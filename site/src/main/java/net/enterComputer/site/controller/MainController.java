@@ -68,6 +68,11 @@ public class MainController {
         return "Marketing";
     }
 
+    @GetMapping("/Web-MobileApp.html")
+    public String getWebAndMob() {
+        return "Web-MobileApp";
+    }
+
     @PostMapping("/contactForm")
     public String submitConForm(@ModelAttribute("ContactUs") ContactUs contactUs,
                                 Model model) {

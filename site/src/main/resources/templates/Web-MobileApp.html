@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Web&MobileApplication</title>
+    <div th:replace="common :: theheader"></div>
+    <style>
+        .res {
+            background-color: #F5F8FD;
+            text-align: center !important;
+        }
+
+        .res h3 {
+            font-size: 32px;
+            margin: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top">
+    <div class="container d-flex">
+        <div class="logo mr-auto">
+            <h1 class="text-light">
+                <a href="index.html">EnterComputer</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html"><img src="" alt="Logo" class="img-fluid"></a>-->
+        </div>
+        <nav class="nav-menu d-none d-lg-block">
+            <ul>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li class="drop-down"><a href="#services">Solutions</a>
+                    <ul>
+                        <li><a href="">ToDoList</a></li>
+                        <li><a href="swot.html">Swot Analysis</a></li>
+                        <li><a href="#">TrackingEmployee</a></li>
+                        <li class="drop-down"><a href="#">Services</a>
+                            <ul>
+                                <li><a href="#">Web&Mobile Application</a></li>
+                                <li><a href="Marketing.html">Marketing</a></li>
+                                <li><a href="#">Business Model</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav><!-- .nav-menu -->
+    </div>
+</header><!-- End Header -->
+
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="clearfix" style="height: auto;">
+    <div class="container d-flex h-100">
+        <div class="row justify-content-center align-self-center" data-aos="fade-up">
+            <div class="col-md-6 intro-info order-md-first order-last" data-aos="zoom-in" data-aos-delay="100">
+                <h2>Web & Mobile<br>for Your <span>Services</span></h2>
+                <p>These days,a fantastically designed website is no longer an option but a prerequisite for a business
+                    looking to enter and find success in the online world. RamaHost Solutions Pvt. Ltd can help you
+                    enter this world of opportunities through our top notch website designing services.</p>
+                <a href="getStarted.html" class="loin-btn">Get Started</a>
+            </div>
+
+            <div class="col-md-6 intro-img order-md-last order-first" data-aos="zoom-out" data-aos-delay="200">
+                <img th:src="@{assets/img/web-mobile/website-design-process.png}" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section><!-- End Hero -->
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+    <div class="container">
+        <img class="img-fluid" th:src="@{assets/img/web-mobile/web-life-cycle.jpg}">
+    </div>
+</section><!-- End About Section -->
+
+
+<section id="about" class="res">
+    <div class="container">
+        <h3>The Top Ten Benefits of Responsive Web Design</h3>
+        <div class="Respons">
+            <img class="img-fluid" th:src="@{assets/img/web-mobile/responsive-web-design.jpg}" style="">
+        </div>
+    </div>
+</section><!-- End About Section -->
+
+<section id="hero" class="clearfix" style="height: auto;">
+    <div class="container d-flex h-100">
+        <div class="row justify-content-center align-self-center" data-aos="fade-up">
+            <div class="col-md-6 intro-img order-md-last order-first" data-aos="zoom-out" data-aos-delay="200">
+                <img th:src="@{assets/img/web-mobile/seo-google-adwords.png}" alt="" class="img-fluid">
+            </div>
+            <div class="col-md-6 intro-info order-md-first order-last" data-aos="zoom-in" data-aos-delay="100">
+                <h2>Improved<br><span>SEO</span></h2>
+                <p>Responsive web design is becoming as important to search engine optimization as quality content.
+                    Stronger backlinks and better bounce rates translate into higher search rankings, but there’s an
+                    extra SEO benefit for mobile optimized sites.</p>
+            </div>
+        </div>
+    </div>
+</section><!-- End Hero -->
+
+
+<!-- ======= Pricing Section ======= -->
+<section id="pricing" class="pricing section-bg wow fadeInUp">
+    <div class="container" data-aos="fade-up">
+        <div class="section-header">
+            <h3>Pricing</h3>
+            <p>Learn more about what our marketing services can do for your institution.</p>
+        </div>
+
+        <div class="row flex-items-xs-middle flex-items-xs-center">
+
+            <!-- Basic Plan  -->
+            <div class="col-xs-12 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><span class="currency">$</span>19<span class="period">/month</span></h3>
+                    </div>
+                    <div class="card-block">
+                        <h4 class="card-title">
+                            Basic Plan
+                        </h4>
+                        <ul class="list-group">
+                            <li class="list-group-item">Odio animi voluptates</li>
+                            <li class="list-group-item">Inventore quisquam et</li>
+                            <li class="list-group-item">Et perspiciatis suscipit</li>
+                            <li class="list-group-item">24/7 Support System</li>
+                        </ul>
+                        <a href="#" class="btn">Choose Plan</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Regular Plan  -->
+            <div class="col-xs-12 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><span class="currency">$</span>29<span class="period">/month</span></h3>
+                    </div>
+                    <div class="card-block">
+                        <h4 class="card-title">
+                            Regular Plan
+                        </h4>
+                        <ul class="list-group">
+                            <li class="list-group-item">Odio animi voluptates</li>
+                            <li class="list-group-item">Inventore quisquam et</li>
+                            <li class="list-group-item">Et perspiciatis suscipit</li>
+                            <li class="list-group-item">24/7 Support System</li>
+                        </ul>
+                        <a href="#" class="btn">Choose Plan</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Premium Plan  -->
+            <div class="col-xs-12 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><span class="currency">$</span>39<span class="period">/month</span></h3>
+                    </div>
+                    <div class="card-block">
+                        <h4 class="card-title">
+                            Premium Plan
+                        </h4>
+                        <ul class="list-group">
+                            <li class="list-group-item">Odio animi voluptates</li>
+                            <li class="list-group-item">Inventore quisquam et</li>
+                            <li class="list-group-item">Et perspiciatis suscipit</li>
+                            <li class="list-group-item">24/7 Support System</li>
+                        </ul>
+                        <a href="#" class="btn">Choose Plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section><!-- End Pricing Section -->
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-info">
+                        <h3>EnterComputer</h3>
+                        <p>
+                            77 Nasr Street, Egypt <br>
+                            Nasr City, Egypt<br><br>
+                            <strong>Phone:</strong> +02 61 54 34<br>
+                            <strong>Email:</strong> EC@example.com<br>
+                        </p>
+                        <div class="social-links mt-3">
+                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li>
+                            <i class="bx bx-chevron-right"></i>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <i class="bx bx-chevron-right"></i>
+                            <a href="#">About us</a>
+                        </li>
+                        <li>
+                            <i class="bx bx-chevron-right"></i>
+                            <a href="#">Solutions</a>
+                        </li>
+                        <li>
+                            <i class="bx bx-chevron-right"></i>
+                            <a href="#">Team</a>
+                        </li>
+                        <li>
+                            <i class="bx bx-chevron-right"></i>
+                            <a href="#">ContactUs</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web&Mobile Application</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">BusinessModel</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6 footer-newsletter">
+                    <div th:replace="common :: Subscribe"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="copyright">
+            &copy; Copyright <strong><span>EnterComputer</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+            Designed by <a href="#">Shaimaa</a>
+        </div>
+    </div>
+</footer><!-- End Footer -->
+
+<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+<div th:replace="common :: foot"></div>
+</body>
+</html>
