@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org">
 <body>
@@ -75,5 +76,64 @@
         <input type="email" name="email"/> <input type="submit" value="Subscribe"/>
     </form>
 </div>
+<div th:fragment="clint">
+<!--  <div th:replace="common :: clint"></div>  -->
+    <div class="owl-carousel clients-carousel">
+        <img src="assets/img/clients/client-1.png"
+             th:src="@{/assets/img/clients/client-1.png}" alt=""/>
+        <img src="assets/img/clients/client-2.png"
+             th:src="@{/assets/img/clients/client-2.png}" alt="">
+        <img src="assets/img/clients/client-3.png"
+             th:src="@{/assets/img/clients/client-3.png}" alt="">
+        <img src="assets/img/clients/client-4.png"
+             th:src="@{/assets/img/clients/client-4.png}" alt="">
+        <img src="assets/img/clients/client-5.png"
+             th:src="@{/assets/img/clients/client-5.png}" alt="">
+        <img src="assets/img/clients/client-6.png"
+             th:src="@{/assets/img/clients/client-6.png}" alt="">
+        <img src="assets/img/clients/client-7.png"
+             th:src="@{/assets/img/clients/client-7.png}" alt="">
+        <img src="assets/img/clients/client-8.png"
+             th:src="@{/assets/img/clients/client-8.png}" alt="">
+    </div>
+</div>
+<div th:fragment="contact">
+<!--  <div th:replace="common :: contact"></div>  -->
+    <form role="form" class="php-email-form" th:action="@{/contactForm}"
+          th:object="${ContactUs}" method="post">
+        <div class="form-row">
+            <div class="col-md-6 form-group">
+                <input type="text" name="name" th:field="*{userName}"
+                       class="form-control" id="name" placeholder="Your Name"
+                       data-rule="minlen:4" data-msg="Please enter at least 4 chars"/>
+                <div class="validate"></div>
+            </div>
+            <div class="col-md-6 form-group">
+                <input type="email" th:field="*{userEmail}"
+                       class="form-control" name="email" id="email"
+                       placeholder="Your Email" data-rule="email"
+                       data-msg="Please enter a valid email"/>
+                <div class="validate"></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input class="form-control" data-msg="Please enter at least 8 chars of subject"
+                   data-rule="minlen:4" id="subject" name="subject"
+                   placeholder="Subject" th:field="*{subject}" type="text"/>
+            <div class="validate"></div>
+        </div>
+        <div class="form-group">
+                <textarea class="form-control"
+                          th:field="*{message}" name="message" rows="5"
+                          data-rule="required" data-msg="Please write something for us" placeholder="Message">
+                </textarea>
+
+        </div>
+        <div class="text-center">
+            <button style="left: 3%;" type="submit">Send Message</button>
+        </div>
+    </form>
+</div>
+
 </body>
 </html>

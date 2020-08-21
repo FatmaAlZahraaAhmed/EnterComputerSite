@@ -30,9 +30,7 @@ button:hover {
   box-shadow: 0 2px 5px #9a9a9a;
   color: #fff;
 }
-a {
-  color: #fff;
-}
+a {color: #fff;}
 
 a:hover {
   color: #42A5ff;
@@ -50,6 +48,9 @@ p {
     padding-bottom: 20px;
 }
 
+.bx{
+  color: #FFFFFF;
+}
 .center{
   text-align: center;
   margin: auto;
@@ -524,7 +525,6 @@ p {
   height: 100vh;
   position: relative;
   background: #f5f8fd  center top no-repeat;
-  /*url("../img/intro-bg.jpg")*/
   background-size: cover;
 }
 #hero .intro-img{
@@ -703,9 +703,9 @@ section {
     color: #535074;
     width: 50%;
 }
-.why-us-img{
-  text-align: center;
-}
+
+.why-us-img{text-align: center;}
+
 @media (max-width: 991px) {
   #why-us .why-us-content {
     padding-top: 30px;
@@ -740,9 +740,7 @@ section {
 /*--------------------------------------------------------------
 # Features
 --------------------------------------------------------------*/
-.features .nav-tabs {
-  border: 0;
-}
+.features .nav-tabs {border: 0;}
 
 .features .nav-link {
   border: 0;
@@ -752,7 +750,7 @@ section {
 }
 
 .features .nav-link:hover {
-  color: #1bb1dc;
+  color: #42A5ff;
 }
 
 .features .nav-link h2{
@@ -765,19 +763,15 @@ section {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.12);
 }
 
-.features .nav-link.active h2 {
-  color: #1bb1dc;
-}
+.features .nav-link.active h2 {color: #42A5ff;}
+
 .features .nav-item .bx{
     font-size: 48px;
     float: left;
-    color: #1bac91;
 }
 .features ul li{
   font-size: 22px;
-  /*color: ;*/
   margin-top: 32px;
-  text-align: center;
   cursor: default;
 }
 .features .tab-pane.active {
@@ -826,10 +820,7 @@ a,p,h1,h2,h3,h4,ul {
   
 }
 
-.section-services .active{
-  background-color: #42a5ff63;
-  
-}
+.section-services .active{ background-color: #42a5ff63;}
 
 .single-service:hover{
   background-color: #42a5ff63;
@@ -837,9 +828,7 @@ a,p,h1,h2,h3,h4,ul {
 
 }
 
-.section-services .header-section {
-  margin-bottom: 35px;
-}
+.section-services .header-section {margin-bottom: 35px;}
 
 .section-services .header-section .title {
   position: relative;
@@ -873,17 +862,12 @@ a,p,h1,h2,h3,h4,ul {
 }
 
 
-.section-services .header-section .title span {
-  color: #1bb1dc;
-}
+.section-services .header-section .title span {color: #42A5ff;}
 
-.section-services .header-section .description {
-  color: #6f6f71;
-}
+.section-services .header-section .description {color: #42A5ff;}
 
 .section-services .single-service {
   margin-top: 40px;
-  /*background-color: #;*/
   box-shadow: 0 0 10px 0 #cccccc;
 }
 
@@ -905,9 +889,7 @@ a,p,h1,h2,h3,h4,ul {
   line-height: 1.8em;
 }
 
-.section-services .single-service .part-2 {
-  padding: 30px 40px 40px;
-}
+.section-services .single-service .part-2 {padding: 30px 40px 40px;}
 
 .section-services .single-service .part-2 .description {
   margin-bottom: 22px;
@@ -921,18 +903,14 @@ a,p,h1,h2,h3,h4,ul {
   font-size: 14px;
   text-decoration: none;
 }
-.section-services .single-service .part-2 a:hover{
-  color: #42A5ff;
-}
+.section-services .single-service .part-2 a:hover{color: #42A5ff;}
 
 .section-services .single-service .part-2 a i {
   margin-right: 10px;
   color: #f70037;
 }
 /*===========Clients============*/
-#clients {
-  padding: 60px 0;
-}
+#clients {padding: 60px 0;}
 
 #clients img {
   max-width: 80%;
@@ -941,9 +919,7 @@ a,p,h1,h2,h3,h4,ul {
   padding: 15px 0;
 }
 
-#clients img:hover {
-  opacity: 1;
-}
+#clients img:hover {opacity: 1;}
 
 #clients .owl-nav, #clients .owl-dots {
   margin-top: 5px;
@@ -967,9 +943,7 @@ a,p,h1,h2,h3,h4,ul {
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
-.team{
-  background-color: #f5f8fd;
-}
+.team{background-color: #f5f8fd;}
 
 .team .member {
   text-align: center;
@@ -1029,9 +1003,7 @@ a,p,h1,h2,h3,h4,ul {
   margin-top: 15px;
 }
 
-.team .member .social a:hover {
-  color: #1bac91;
-}
+.team .member .social a:hover {color: #42A5ff;}
 
 .team .member .social i {
   font-size: 18px;
@@ -1095,13 +1067,9 @@ a,p,h1,h2,h3,h4,ul {
   color: #43857a;
 }
 
-.contact .info .email p {
-  padding-top: 5px;
-}
+.contact .info .email p {padding-top: 5px;}
 
-.contact .info .social-links {
-  padding-left: 60px;
-}
+.contact .info .social-links {padding-left: 60px;}
 
 .contact .info .social-links a {
   font-size: 18px;
@@ -1123,7 +1091,9 @@ a,p,h1,h2,h3,h4,ul {
   color: #fff;
 }
 
-.contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
+.contact .info .email:hover i,
+.contact .info .address:hover i, 
+.contact .info .phone:hover i {
   background: #42A5ff;
   color: #fff;
 }
@@ -1135,9 +1105,7 @@ a,p,h1,h2,h3,h4,ul {
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
 
-.contact .php-email-form .form-group {
-  padding-bottom: 8px;
-}
+.contact .php-email-form .form-group {padding-bottom: 8px;}
 
 .contact .php-email-form .validate {
   display: none;
@@ -1156,9 +1124,7 @@ a,p,h1,h2,h3,h4,ul {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br + br {
-  margin-top: 25px;
-}
+.contact .php-email-form .error-message br + br {margin-top: 25px;}
 
 .contact .php-email-form .sent-message {
   display: none;
@@ -1197,9 +1163,7 @@ a,p,h1,h2,h3,h4,ul {
 
 }
 
-.contact .php-email-form input {
-  height: 44px;
-}
+.contact .php-email-form input {height: 44px;}
 
 .contact .php-email-form textarea {
   padding: 10px 12px;
@@ -1219,7 +1183,7 @@ a,p,h1,h2,h3,h4,ul {
 }
 
 .contact .php-email-form button[type="submit"]:hover {
-  /*background: #;*/
+
 }
 
 @-webkit-keyframes animate-loading {
