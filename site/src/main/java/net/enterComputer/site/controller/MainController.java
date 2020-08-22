@@ -60,6 +60,7 @@ public class MainController {
     @PostMapping("/swot")
     public String submitSwot(@ModelAttribute("SWOT") SWOT swot) {
         swotService.saveSWOT(swot);
+        swotService.sendSwotMail(swot);
         return "save-swot";
     }
 

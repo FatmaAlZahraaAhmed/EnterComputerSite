@@ -1,0 +1,8 @@
+CREATE TABLE `contactus` (
+  `user_id` bigint NOT NULL AUTO_INCREMENT,
+  `message` varchar(255) DEFAULT NULL,
+  `subject` varchar(255) DEFAULT NULL,
+  `user_email` varchar(255) DEFAULT NULL,
+  `user_name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
