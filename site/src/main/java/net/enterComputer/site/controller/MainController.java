@@ -27,6 +27,7 @@ public class MainController {
 
     //accept new income
     @GetMapping(path = {"/", "/index.html"})
+    @ModelAttribute
     public String show(Model model) {
         model.addAttribute("ContactUs", new ContactUs());
         return "index";

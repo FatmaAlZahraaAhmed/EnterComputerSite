@@ -425,7 +425,7 @@ p {
 }
 
 .mobile-nav-toggle i {
-  color: #fff;
+  color: #42A5ff;
 }
 
 .mobile-nav {
@@ -622,7 +622,12 @@ section {
   padding: 60px 0;
   overflow: hidden;
 }
-
+.features{
+  background: #ffffff;
+}
+.features .bx{
+  color: #42A5ff;
+}
 .section-bg {
   background-color: #f2f9f8;
 }
