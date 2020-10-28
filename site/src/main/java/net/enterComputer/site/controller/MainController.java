@@ -27,7 +27,6 @@ public class MainController {
 
     //accept new income
     @GetMapping(path = {"/", "/index.html"})
-    @ModelAttribute
     public String show(Model model) {
         model.addAttribute("ContactUs", new ContactUs());
         return "index";
@@ -47,7 +46,8 @@ public class MainController {
 
 
     @PostMapping("/register")
-    public String submitRegister(@ModelAttribute("RegisterAccount") RegisterAccount account) {
+    public String submitRegister(@ModelAttribute("RegisterAccount")
+                                             RegisterAccount account) {
         accountService.saveNewAccount(account);
         return "success-reg";
     }
